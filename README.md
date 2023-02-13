@@ -13,4 +13,13 @@ docker build -t rhew.org .
 docker run -p 80:80 rhew.org
 ```
 
-http://localhost:80
+http://127.0.0.1:80
+
+# Run in production
+
+```
+docker pull origin main
+docker build -t rhew.org .
+docker run -d -p 443:443 --restart unless-stopped rhew.org
+```
+
