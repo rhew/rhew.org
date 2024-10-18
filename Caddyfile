@@ -1,4 +1,7 @@
 rhew.org
- 
+
 root * /usr/share/caddy
+basic_auth /podcasts/* {
+    Bob $2a$14$Zkx19XLiW6VYouLHR5NmfOFU0z2GTNmpkT/5qqR7hx4IjWJPDhjvG
+}
 file_server
