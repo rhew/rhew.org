@@ -15,11 +15,35 @@ docker run -p 80:80 rhew.org
 
 http://127.0.0.1:80
 
-# Run in production
+# Remote
 
 ```
-docker pull origin main
-docker build -t rhew.org .
-docker run -d -p 443:443 --restart unless-stopped rhew.org
+ssh rhew.org
+git pull origin main
+docker-compose build
 ```
 
+## Site
+
+Change user and password below.
+
+```
+echo 'PODCAST_USER=Bob' > secrets.env
+echo "PODCAST_PASSWORD_HASH='$(docker run --rm caddy caddy hash-password --plaintext 'hiccup')'" >> secrets.env
+
+docker-compose up -d rhew.org
+```
+
+## Podcast stripper
+
+Add "`OPEN_AI_KEY`" to `podcast-stripper/secrets.env`.
+
+```
+docker-compose up -d stripper
+```
+
+## Podcast manager
+
+```
+docker-compose up -d manager
+```
