@@ -2,4 +2,4 @@ secrets.env
 podcast-stripper/venv/
 podcast-stripper/cheat-sheet.sh
 podcast-stripper/transcript.pickle
-podcast-mirror/venv/
+podcast-manager/venv/
