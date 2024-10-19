@@ -20,6 +20,10 @@ http://127.0.0.1:80
 ```
 docker pull origin main
 docker build -t rhew.org .
-docker run -d -p 443:443 --restart unless-stopped rhew.org
+
+echo 'PODCAST_USER=Bob' > secrets.env
+echo "PODCAST_PASSWORD_HASH='$(docker run --rm caddy caddy hash-password --plaintext 'hiccup')'" >> secrets.env
+
+docker-compose up -d rhew.org
 ```
 
