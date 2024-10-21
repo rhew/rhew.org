@@ -14,9 +14,14 @@ podcast_directory = sys.argv[1] if len(sys.argv) > 1 else './'
 
 feeds = [
     {
-        'name': 'AstronomyCast',
-        'url': 'https://astronomycast.libsyn.com/rss',
+        'name': 'Freakonomics',
+        'url': 'https://feeds.simplecast.com/Y8lFbOT4',
+        'since': '2024-10-11'
     },
+    # {
+    #     'name': 'AstronomyCast',
+    #     'url': 'https://astronomycast.libsyn.com/rss',
+    # },
     # {
     #     'name': '99pi',
     #     'url': 'https://feeds.99percentinvisible.org/99percentinvisible',
@@ -93,7 +98,8 @@ while True:
             last_quarter = datetime.datetime.now() - datetime.timedelta(weeks=13)
             if published < last_quarter:
                 continue
-
+            if 'since' in feed and published < datetime.datetime.strptime(feed['since'], "%Y-%m-%d"):
+                continue
             episode_filename = get_filename(
                 input_episode['published_parsed'][0],
                 input_episode['published_parsed'][1],
@@ -129,5 +135,5 @@ while True:
 
         output.rss_file(os.path.join(podcast_directory, f'{feed["name"]}.xml'))
 
-    print('will check back in 5 minutes')
+    print('will check back in an hour')
     sleep(3600)
