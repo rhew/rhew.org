@@ -3,7 +3,7 @@
 import datetime
 import hashlib
 import os
-from sleep import sleep
+from time import sleep
 import sys
 
 from feedgen.feed import FeedGenerator
