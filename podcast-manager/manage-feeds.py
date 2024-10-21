@@ -3,6 +3,7 @@
 import datetime
 import hashlib
 import os
+from sleep import sleep
 import sys
 
 from feedgen.feed import FeedGenerator
@@ -78,38 +79,55 @@ def add_episode(output, input_episode, episode_url):
     output_episode.summary(input_episode.summary)
 
 
-for feed in feeds:
+while True:
+    for feed in feeds:
 
-    input = feedparser.parse(feed['url'])
-    output = create_podcast_feed(input)
+        input = feedparser.parse(feed['url'])
+        output = create_podcast_feed(input)
 
-    feed_directory = os.path.join(podcast_directory, feed['name'])
-    os.makedirs(feed_directory, exist_ok=True)
+        feed_directory = os.path.join(podcast_directory, feed['name'])
+        os.makedirs(feed_directory, exist_ok=True)
 
-    for input_episode in input.entries:
-        published = datetime.datetime(*(input_episode['published_parsed'][0:6]))
-        last_quarter = datetime.datetime.now() - datetime.timedelta(weeks=13)
-        if published < last_quarter:
-            continue
+        for input_episode in input.entries:
+            published = datetime.datetime(*(input_episode['published_parsed'][0:6]))
+            last_quarter = datetime.datetime.now() - datetime.timedelta(weeks=13)
+            if published < last_quarter:
+                continue
 
-        episode_filename = get_filename(
-            input_episode['published_parsed'][0],
-            input_episode['published_parsed'][1],
-            input_episode['published_parsed'][2],
-            feed['name'],
-            input_episode.id
-        )
-        episode_path = os.path.join(feed_directory, episode_filename)
-        episode_url = f'https://rhew.org/podcasts/{feed["name"]}/{episode_filename}'
+            episode_filename = get_filename(
+                input_episode['published_parsed'][0],
+                input_episode['published_parsed'][1],
+                input_episode['published_parsed'][2],
+                feed['name'],
+                input_episode.id
+            )
+            episode_filename_stripped = get_filename(
+                input_episode['published_parsed'][0],
+                input_episode['published_parsed'][1],
+                input_episode['published_parsed'][2],
+                feed['name'],
+                input_episode.id,
+                stripped=True
+            )
+            episode_path = os.path.join(feed_directory, episode_filename)
+            episode_path_stripped = os.path.join(feed_directory, episode_filename_stripped)
+            episode_url = f'https://rhew.org/podcasts/{feed["name"]}/{episode_filename}'
+            episode_url_stripped = f'https://rhew.org/podcasts/{feed["name"]}/{episode_filename_stripped}'
 
-        for link in [link
-                     for link in input_episode.links
-                     if link['type'] == 'audio/mpeg']:
-            if not os.path.isfile(episode_path):
-                download_episode(link['href'], episode_path)
-            else:
-                print(f'Already downloaded {episode_filename}')
+            for link in [link
+                         for link in input_episode.links
+                         if link['type'] == 'audio/mpeg']:
 
-            add_episode(output, input_episode, episode_url)
+                if not os.path.isfile(episode_path_stripped):
+                    add_episode(output, input_episode, episode_url_stripped)
+                else:
+                    if not os.path.isfile(episode_path):
+                        print(f"Downloading {episode_filename}.")
+                        download_episode(link['href'], episode_path)
 
-    output.rss_file(os.path.join(podcast_directory, f'{feed["name"]}.xml'))
+                    add_episode(output, input_episode, episode_url)
+
+        output.rss_file(os.path.join(podcast_directory, f'{feed["name"]}.xml'))
+
+    print('will check back in 5 minutes')
+    sleep(3600)
