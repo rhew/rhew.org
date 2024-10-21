@@ -90,7 +90,6 @@ for feed in feeds:
         published = datetime.datetime(*(input_episode['published_parsed'][0:6]))
         last_quarter = datetime.datetime.now() - datetime.timedelta(weeks=13)
         if published < last_quarter:
-            print(f'{input_episode["published"]} is too damn old')
             continue
 
         episode_filename = get_filename(
@@ -113,4 +112,4 @@ for feed in feeds:
 
             add_episode(output, input_episode, episode_url)
 
-    output.rss_file(f'{feed["name"]}.xml')
+    output.rss_file(os.path.join(podcast_directory, f'{feed["name"]}.xml'))

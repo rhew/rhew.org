@@ -194,9 +194,6 @@ class EventHandler(pyinotify.ProcessEvent):
         except ValueError as e:
             print(e)
 
-    def process_IN_DELETE(self, event):
-        print("Notified of delete:", event.pathname)
-
 
 @click.command()
 @click.argument('path')
@@ -215,7 +212,7 @@ def main(path, open_ai_key, output, load, monitor):
         notifier = pyinotify.Notifier(manager, handler)
         _ = manager.add_watch(
             path,
-            pyinotify.IN_DELETE | pyinotify.IN_CREATE,
+            pyinotify.IN_CREATE,
             rec=True)
 
         notifier.loop()
