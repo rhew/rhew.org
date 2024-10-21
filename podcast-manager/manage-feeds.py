@@ -118,7 +118,7 @@ while True:
                          for link in input_episode.links
                          if link['type'] == 'audio/mpeg']:
 
-                if not os.path.isfile(episode_path_stripped):
+                if os.path.isfile(episode_path_stripped):
                     add_episode(output, input_episode, episode_url_stripped)
                 else:
                     if not os.path.isfile(episode_path):
