@@ -52,7 +52,7 @@ def get_commercials(client, transcript):
     messages.insert(0, {"role": "system", "content": prompt})
 
     completion = client.chat.completions.create(
-        model="gpt-4o",
+        model="gpt-4o-mini",
         messages=messages
     )
 
@@ -163,7 +163,7 @@ def get_stripped_name(path):
 
 def strip_all(client, directory):
     print(f'Stripping everything in {directory}')
-    for filename in glob(os.path.join(directory, '*.mp3')):
+    for filename in glob(os.path.join(directory, '*', '*.mp3')):
         filepath = os.path.join(directory, filename)
 
         if filepath.endswith('-stripped.mp3'):
