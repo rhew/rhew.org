@@ -3,23 +3,24 @@
 import datetime
 import hashlib
 import os
+import sys
 
 from feedgen.feed import FeedGenerator
 import feedparser
 import requests
+
+podcast_directory = sys.argv[1] if len(sys.argv) > 1 else './'
 
 feeds = [
     {
         'name': 'AstronomyCast',
         'url': 'https://astronomycast.libsyn.com/rss',
     },
-    {
-        'name': '99pi',
-        'url': 'https://feeds.99percentinvisible.org/99percentinvisible',
-    },
+    # {
+    #     'name': '99pi',
+    #     'url': 'https://feeds.99percentinvisible.org/99percentinvisible',
+    # },
 ]
-
-PODCAST_DIRECTORY = './'
 
 
 def get_filename(year, month, day, feed_name, id, stripped=False):
@@ -82,7 +83,7 @@ for feed in feeds:
     input = feedparser.parse(feed['url'])
     output = create_podcast_feed(input)
 
-    feed_directory = os.path.join(PODCAST_DIRECTORY, feed['name'])
+    feed_directory = os.path.join(podcast_directory, feed['name'])
     os.makedirs(feed_directory, exist_ok=True)
 
     for input_episode in input.entries:

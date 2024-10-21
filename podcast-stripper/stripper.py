@@ -1,4 +1,6 @@
-from datetime import datetime
+#!/usr/bin/env python
+
+import datetime
 from glob import glob
 import json
 import tempfile
@@ -12,8 +14,8 @@ import pyinotify
 
 
 def srt_format(timestamp):
-    return datetime.strftime(
-        datetime.utcfromtimestamp(timestamp), "%H:%M:%S,%f")[:-3]
+    return datetime.datetime.strftime(
+        datetime.datetime.fromtimestamp(timestamp), "%H:%M:%S,%f")[:-3]
 
 
 def get_commercials(client, transcript):
@@ -160,6 +162,7 @@ def get_stripped_name(path):
 
 
 def strip_all(client, directory):
+    print(f'Stripping everything in {directory}')
     for filename in glob(os.path.join(directory, '*.mp3')):
         filepath = os.path.join(directory, filename)
 
@@ -197,12 +200,12 @@ class EventHandler(pyinotify.ProcessEvent):
 
 @click.command()
 @click.argument('path')
-@click.option('--key', help='OpenAI API key')
+@click.option('--open-ai-key', envvar='OPEN_AI_KEY', help='OpenAI API key')
 @click.option('--output', help='Audio file with result')
 @click.option('--load', is_flag=True, help='Load previous transcription')
 @click.option('--monitor', is_flag=True, help='Monitor the given path')
-def main(path, key, output, load, monitor):
-    client = OpenAI(api_key=key)
+def main(path, open_ai_key, output, load, monitor):
+    client = OpenAI(api_key=open_ai_key)
 
     if monitor:
         strip_all(client, path)
