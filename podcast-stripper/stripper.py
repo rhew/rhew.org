@@ -121,6 +121,7 @@ def reduce_audio_file(filename):
     reduced_size = os.path.getsize(fp.name)
     frame_rate = reduced.frame_rate
     while reduced_size >= max_size:
+        print(f'reduced_size {reduced_size} bytes.')
         frame_rate = int(frame_rate/2)
         reduced.set_frame_rate(frame_rate)
         reduced.export(fp.name, format="mp3", parameters=["-ac", "1"])
