@@ -112,6 +112,5 @@ for feed in feeds:
                 print(f'Already downloaded {episode_filename}')
 
             add_episode(output, input_episode, episode_url)
-        break
 
     output.rss_file(f'{feed["name"]}.xml')
