@@ -21,6 +21,7 @@ feeds = [
     # {
     #     'name': 'AstronomyCast',
     #     'url': 'https://astronomycast.libsyn.com/rss',
+    #     'since': '2024-09-01'
     # },
     # {
     #     'name': '99pi',

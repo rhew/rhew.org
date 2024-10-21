@@ -113,11 +113,19 @@ def get_trimmed(client, audio_file, transcript, commercial_data):
 
 
 def reduce_audio_file(filename):
+    max_size = 26339874
     reduced = AudioSegment.from_mp3(filename)
     with tempfile.NamedTemporaryFile(delete=False, suffix=".mp3") as fp:
         fp.close()
     reduced.export(fp.name, format="mp3", parameters=["-ac", "1"])
     reduced_size = os.path.getsize(fp.name)
+    frame_rate = reduced.frame_rate
+    while reduced_size >= max_size:
+        frame_rate = int(frame_rate/2)
+        reduced.set_frame_rate(frame_rate)
+        reduced.export(fp.name, format="mp3", parameters=["-ac", "1"])
+        print(f'Reduced frame rate to {frame_rate}.')
+        reduced_size = os.path.getsize(fp.name)
     print(f"Reduced input file by {os.path.getsize(filename)-reduced_size} "
           + f"to {reduced_size} before transcribing.")
     return fp.name
