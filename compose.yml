@@ -30,6 +30,8 @@ services:
     restart: unless-stopped    
     volumes:
       - podcasts:/var/podcasts
+    environment:
+      INTERVAL: '3600'
 
 volumes:
   podcasts:
