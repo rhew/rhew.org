@@ -113,7 +113,7 @@ def get_trimmed(client, audio_file, transcript, commercial_data):
 
 
 def reduce_audio_file(filename):
-    max_file_size = 50000000
+    max_file_size = 80000000
 
     file_size = os.path.getsize(filename)
     if file_size > max_file_size:
