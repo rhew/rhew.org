@@ -1,0 +1,10 @@
+baseURL = 'https://rhew.org/projects/'
+languageCode = 'en-us'
+title = 'rhew.org: projects'
+theme = 'rhew-org-theme'
+
+[languages]
+  [languages.en]
+    title = "rhew.org: projects"
+    [languages.en.params.logo]
+      logoText = "rhew.org:~/projects$"
