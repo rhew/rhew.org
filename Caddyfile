@@ -6,11 +6,3 @@ rhew.org {
     file_server
 }
 
-localhost {
-    root * /usr/share/caddy
-    basic_auth /podcasts/* {
-        {$PODCAST_USER} {$PODCAST_PASSWORD_HASH}
-    }
-    file_server
-    tls internal
-}
