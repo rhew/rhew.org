@@ -4,13 +4,12 @@ RUN apk add --update hugo
 WORKDIR /var/hugo
 
 COPY hugo-src/config.toml .
-COPY hugo-src/archetypes .
-COPY hugo-src/content .
+COPY hugo-src/archetypes ./archetypes
+COPY hugo-src/content ./content
 
 RUN mkdir -p themes/rhew-org-theme
 RUN apk add --update git
 RUN git clone https://github.com/panr/hugo-theme-terminal.git themes/rhew-org-theme
-
 RUN hugo --minify
 
 
