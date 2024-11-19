@@ -1,11 +1,16 @@
-# {
-#     acme_ca https://acme-staging-v02.api.letsencrypt.org/directory
-# }
-
-rhew.org
-
-root * /usr/share/caddy
-basic_auth /podcasts/* {
-    {$PODCAST_USER} {$PODCAST_PASSWORD_HASH}
+rhew.org {
+    root * /usr/share/caddy
+    basic_auth /podcasts/* {
+        {$PODCAST_USER} {$PODCAST_PASSWORD_HASH}
+    }
+    file_server
 }
-file_server
+
+localhost {
+    root * /usr/share/caddy
+    basic_auth /podcasts/* {
+        {$PODCAST_USER} {$PODCAST_PASSWORD_HASH}
+    }
+    file_server
+    tls internal
+}
