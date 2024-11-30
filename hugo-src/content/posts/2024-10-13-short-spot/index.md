@@ -3,8 +3,12 @@ title: "Short Spot: Ads Reimagined"
 date: 2024-10-13
 summary: Podcasts and ads—an inseparable duo?
 tags:
-  - code
   - supervillainy
+  - podcasts
+  - code
+  - docker
+  - openai
+  - ffmpeg
 ---
 
 # Short Spot: Ads Reimagined
