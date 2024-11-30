@@ -4,6 +4,7 @@ date: 2024-11-19
 tags: ["Hugo", "Docker", "Markdown", "Static Site"]
 summary: I decided to use Hugo to build a blog.
 tags:
+  - rhew.org
   - code
   - terminal
   - hugo
