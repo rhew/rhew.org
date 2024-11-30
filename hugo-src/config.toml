@@ -3,6 +3,8 @@ languageCode = 'en-us'
 title = 'rhew.org: projects'
 theme = 'rhew-org-theme'
 
+[params]
+  centerTheme = true
 [languages]
   [languages.en]
     title = "rhew.org: projects"
@@ -21,3 +23,19 @@ theme = 'rhew-org-theme'
       words = "words"
     [languages.en.params.logo]
       logoText = "rhew.org:~/projects$"
+    [languages.en.menu]
+      [[languages.en.menu.main]]
+        url = "/tags/recipies/"
+        name = "recipies"
+        weight = 1
+        identifier = "recipies"
+      [[languages.en.menu.main]]
+        url = "/tags/supervillainy/"
+        name = "supervillainy"
+        weight = 2
+        identifier = "supervillainy"
+      [[languages.en.menu.main]]
+        url = "/tags/"
+        name = "and other shenanigans"
+        weight = 3
+        identifier = "shenanigans"
