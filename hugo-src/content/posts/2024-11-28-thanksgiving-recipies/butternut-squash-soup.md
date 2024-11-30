@@ -1,6 +1,6 @@
 ---
 title: "Butternut Squash and Sweet Potato Soup"
-date: 2024-11-30
+date: 2024-11-28
 summary: Warm, hearty, and packed with flavor, this butternut squash and sweet potato soup is a favorite of Lori's.
 tags: 
   - recipes

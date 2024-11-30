@@ -1,6 +1,6 @@
 ---
 title: "Cheddar Jalapeño and Rosemary Bread"
-date: 2024-11-30
+date: 2024-11-28
 summary: "Inspired by Kenji's foolproof pan pizza recipe from Serious Eats (a personal favorite), I created two flavorful breads that became instant hits: **Cheddar Jalapeño** and **Rosemary**."
 tags: 
   - recipes
