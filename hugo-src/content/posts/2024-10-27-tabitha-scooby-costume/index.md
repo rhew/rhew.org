@@ -1,7 +1,11 @@
-+++
-title = "The Mystery Machine: A Halloween Tale of Craft Supplies and Canine Commitment"
-date = 2024-10-27
-+++
+---
+title: "The Mystery Machine: A Halloween Tale of Craft Supplies and Canine Commitment"
+date: 2024-10-27
+summary: This Halloween, our dog, Tabitha (Tabi), became a mobile Scooby-Doo.
+tags:
+  - crafts
+  - lori
+---
 
 # The Mystery Machine: A Halloween Tale of Craft Supplies and Canine Commitment
 

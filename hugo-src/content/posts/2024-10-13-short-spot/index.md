@@ -1,7 +1,11 @@
-+++
-title = "Short Spot: Ads Reimagined"
-date = 2024-10-13
-+++
+---
+title: "Short Spot: Ads Reimagined"
+date: 2024-10-13
+summary: Podcasts and ads—an inseparable duo?
+tags:
+  - code
+  - supervillainy
+---
 
 # Short Spot: Ads Reimagined
 

@@ -1,9 +1,12 @@
-+++
-title = "A Birthday Gift: The Coffee Mug Rack"
-date = 2024-09-30
-+++
-
-# A Birthday Gift: The Coffee Mug Rack
+---
+title: "A Birthday Gift: The Coffee Mug Rack"
+date: 2024-09-30
+summary: For Lori’s birthday this year, I wanted to make her something meaningful, practical, and just a little bit stylish.
+tags:
+  - woodworking
+  - crafts
+  - lori
+---
 
 For Lori’s birthday this year, I wanted to make her something meaningful, practical, and just a little bit stylish. Lori has a deep love for coffee mugs, a passion that, despite her best efforts, often overflows cabinets and shelves. Enter the coffee mug rack: a solution for storage, a display for her favorites, and a quiet way to say, “I love you.”
 
