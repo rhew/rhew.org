@@ -1,12 +1,7 @@
 secrets.env
 version
 todo.md
-podcast-stripper/transcript.pickle
-podcast-manager/podcasts/
-podcast-manager/cheat-sheet.md
 hugo-src/public/
 hugo-src/themes/
 hugo-src/.hugo_build.lock
 **/cheat-sheet.*
-**/venv/
-**/__pycache__/
