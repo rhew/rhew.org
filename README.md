@@ -8,7 +8,7 @@ Change user and password below.
 echo 'PODCAST_USER=Bob' > podcast-stripper/secrets.env
 echo "PODCAST_PASSWORD_HASH='$(docker run --rm caddy caddy hash-password --plaintext 'hiccup')'" >> podcast-stripper/secrets.env
 mkdir podcast-stripper
-touch podcast-stripper/secrets.env
+touch stripper-secrets.env
 
 ```
 
@@ -46,7 +46,8 @@ docker-compose build
 
 ## Configure secrets
 
-See above
+  - See above for podcast directory secrets
+  - See https://github.com/rhew/short-spot for openai secrets
 
 ## Run
 ```

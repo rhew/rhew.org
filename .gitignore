@@ -1,4 +1,4 @@
-secrets.env
+*secrets.env
 version
 todo.md
 hugo-src/public/

@@ -20,7 +20,7 @@ services:
     restart: "no"
     # Contains OPEN_AI_KEY
     env_file:
-      - podcast-stripper/secrets.env
+      - stripper-secrets.env
     volumes:
       - podcasts:/var/podcasts
   manager:
