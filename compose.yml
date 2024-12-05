@@ -7,7 +7,7 @@ services:
     image: rhew.org
     ports: 
       - 443:443
-    restart: unless-stopped    
+    restart: unless-stopped
     # Contains PODCAST_USER and  PODCAST_PASSWORD_HASH
     env_file:
       - secrets.env
@@ -27,7 +27,7 @@ services:
     image: manager
     container_name: manager
     command: [ "python", "manage-feeds.py", "/var/podcasts" ]
-    restart: unless-stopped    
+    restart: unless-stopped
     volumes:
       - podcasts:/var/podcasts
     environment:
