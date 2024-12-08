@@ -3,7 +3,7 @@ title: "Retirement Shenanigans: Plans for Villainy and Mischief"
 date: 2024-12-05
 summary: I've decided to assemble a bucket list of shenanigans worthy of my diabolical retirement.
 tags:
-  - supervilliany
+  - supervillainy
   - mountainbiking
   - rockets
   - adm-3a
