@@ -1,7 +1,7 @@
 baseURL = 'https://rhew.org/projects/'
 languageCode = 'en-us'
 title = 'rhew.org: projects'
-theme = 'rhew-org-theme'
+theme = ["hugo-video", "rhew-org-theme"]
 
 [params]
   centerTheme = true
