@@ -36,6 +36,8 @@ My trusty **ADM-3A terminal** is out of commission—hardly ideal for a villain�
 
 ## Trail Day Tactics
 
+![Work Day](workday.webp)
+
 The **Lake Crabtree County Park** trails are in need of some tender, loving care (or possibly some maniacal reinvention). I’m hatching a plot to organize a **trail day** where my trusty Wednesday night mountain bike crew gets roped into maintenance duty. Bribery in the form of cold drinks and post-work tacos may be required. But imagine the trail signage: “Maintained by Evil Supervillains and Friends.” Delightful.
 
 ---
