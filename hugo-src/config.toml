@@ -25,10 +25,10 @@ theme = ["hugo-video", "rhew-org-theme"]
       logoText = "rhew.org:~/projects$"
     [languages.en.menu]
       [[languages.en.menu.main]]
-        url = "/tags/recipies/"
-        name = "recipies"
+        url = "/tags/recipes/"
+        name = "recipes"
         weight = 1
-        identifier = "recipies"
+        identifier = "recipes"
       [[languages.en.menu.main]]
         url = "/tags/supervillainy/"
         name = "supervillainy"
