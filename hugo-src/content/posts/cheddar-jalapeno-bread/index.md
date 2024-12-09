@@ -7,12 +7,12 @@ tags:
   - kenji
 ---
 
-This year for Thanksgiving, I skipped traditional dinner rolls and put my trusty pizza dough recipe to use in a new way. Inspired by Kenji's foolproof pan pizza recipe from Serious Eats (a personal favorite), I created two flavorful breads that became instant hits: **Cheddar Jalapeño** and [**Rosemary**]({{< relref "rosemary-bread.md" >}}).
+This year for Thanksgiving, I skipped traditional dinner rolls and put my trusty pizza dough recipe to use in a new way. Inspired by Kenji's foolproof pan pizza recipe from Serious Eats (a personal favorite), I created two flavorful breads that became instant hits: **Cheddar Jalapeño** and [**Rosemary**]({{< ref "/posts/rosemary-bread" >}}).
 
 ![Cheddar Jalapeño Bread](cheddar-jalapeno-bread.jpg)
 
 ## Ingredients
-- [Pan Pizza Dough]({{< relref "../serious-eats-foolproof-pan-pizza" >}}). This recipe is for the **9-inch pan**.
+- [Pan Pizza Dough]({{< ref "/posts/serious-eats-foolproof-pan-pizza" >}}). This recipe is for the **9-inch pan**.
 - 1 additional Tbsp olive oil
 - 3 garlic cloves, minced
 - Red pepper flakes
@@ -25,7 +25,7 @@ This year for Thanksgiving, I skipped traditional dinner rolls and put my trusty
 ## Instructions
 
 1. **Make the dough**
-  Follow the [Pan Pizza Dough]({{< relref "../serious-eats-foolproof-pan-pizza" >}}) recipe. This recipe is for the **9-inch pan**.
+  Follow the [Pan Pizza Dough]({{< ref "/posts/serious-eats-foolproof-pan-pizza" >}}) recipe. This recipe is for the **9-inch pan**.
 
 1. **Top**
   Top with olive oil, garlic, and red pepper flakes. Add cheeses followed by the pickled jalapeño peppers.

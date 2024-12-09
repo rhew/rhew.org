@@ -39,9 +39,9 @@ This is my go-to base recipe for pan pizza and bread. Adapted from Kenji’s [fo
 
 7. **Top with Awesomeness**
   Follow the recipe links below for toppings be sure to choose one 12-inch and one 9-inch recipe.
-    - **[Cheddar Jalapeño Bread (9-inch)]({{< relref "../cheddar-jalapeno-bread" >}})**
-    - **[Rosemary Bread (12-inch)]({{< relref "../rosemary-bread" >}})**
-    - **[Crab Pizza (12-inch)]({{< relref "../crab-pizza" >}})**
+    - **[Cheddar Jalapeño Bread (9-inch)]({{< ref "/posts/cheddar-jalapeno-bread" >}})**
+    - **[Rosemary Bread (12-inch)]({{< ref "/posts/rosemary-bread" >}})**
+    - **[Crab Pizza (12-inch)]({{< ref "/posts/crab-pizza" >}})**
 
 8. **Bake**
   Transfer the pans to the oven and bake until top is golden brown and bubbly, about 10 minutes for the 9-inch and 18 minutes for the 12-inch.

@@ -12,7 +12,7 @@ Crab pizza is a savory twist on classic pan pizza, blending the rich flavors of 
 ![Crab Pizza](crab-pizza.jpg)
 
 ## Ingredients
-- [Pan Pizza Dough]({{< relref "../serious-eats-foolproof-pan-pizza" >}}). This recipe is for the **12-inch pan**.
+- [Pan Pizza Dough]({{< ref "/posts/serious-eats-foolproof-pan-pizza" >}}). This recipe is for the **12-inch pan**.
 - 1 additional Tbsp olive oil
 - 3 garlic cloves, minced
 - Red pepper flakes
@@ -26,7 +26,7 @@ Crab pizza is a savory twist on classic pan pizza, blending the rich flavors of 
 ## Instructions
 
 1. **Make the dough**
-  Follow the [Pan Pizza Dough]({{< relref "../serious-eats-foolproof-pan-pizza" >}}) recipe. This recipe is for the **12-inch pan**.
+  Follow the [Pan Pizza Dough]({{< ref "/posts/serious-eats-foolproof-pan-pizza" >}}) recipe. This recipe is for the **12-inch pan**.
 
 1. **Top**
   Top with olive oil, garlic, red pepper flakes, and Old Bay seasonging. Add cheese layered with most of the crab. Add onions, remaining crab, and more Old Bay seasoning.

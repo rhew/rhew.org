@@ -10,7 +10,7 @@ tags:
 This year for Thanksgiving, I skipped traditional dinner rolls and put my trusty pizza dough recipe to use in a new way. Inspired by Kenji's foolproof pan pizza recipe from Serious Eats (a personal favorite), I created two flavorful breads that became instant hits: [**Cheddar Jalapeño**]({{< relref "cheddar-jalapeno-bread.md" >}}) and **Rosemary**.  
 
 ## Ingredients
-- [Pan Pizza Dough]({{< relref "../serious-eats-foolproof-pan-pizza" >}}). This recipe is for the **12-inch pan**.
+- [Pan Pizza Dough]({{< ref "/posts/serious-eats-foolproof-pan-pizza" >}}). This recipe is for the **12-inch pan**.
 - 1 cup olive oil
 - ¼ cup fresh rosemary leaves (from our patio)
 
@@ -19,7 +19,7 @@ This year for Thanksgiving, I skipped traditional dinner rolls and put my trusty
 ## Instructions
 
 1. **Make the dough**
-  Follow the [Pan Pizza Dough]({{< relref "../serious-eats-foolproof-pan-pizza" >}}) recipe. This recipe is for the **12-inch pan**.
+  Follow the [Pan Pizza Dough]({{< ref "/posts/serious-eats-foolproof-pan-pizza" >}}) recipe. This recipe is for the **12-inch pan**.
 
 1. **Make Rosemary Infused Oil***
   Heat 1 cup of olive oil with ¼ cup of fresh rosemary leaves over low heat for about 10 minutes. Let it steep for at least an hour. Strain the leaves from the oil, reserving a few leaves.
