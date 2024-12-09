@@ -1,7 +1,6 @@
 services:
   rhew.org:
     build:
-      dockerfile: ./Dockerfile.rhew.org
       context: .
     container_name: rhew.org
     image: rhew.org
@@ -13,6 +12,7 @@ services:
       - secrets.env
     volumes:
       - podcasts:/usr/share/caddy/podcasts
+      - caddy-data:/data
   stripper:
     image: stripper
     container_name: stripper
@@ -36,3 +36,4 @@ services:
 
 volumes:
   podcasts:
+  caddy-data:
