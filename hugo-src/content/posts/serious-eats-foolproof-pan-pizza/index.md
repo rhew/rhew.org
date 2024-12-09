@@ -1,6 +1,6 @@
 ---
 title: "Base Pan Pizza Recipe"
-date: 2024-12-9
+date: 2024-12-09
 tags:
 - recipes
 - kenji
