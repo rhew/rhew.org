@@ -6,6 +6,7 @@ tags:
   - supervillainy
   - openai
   - christmas
+  - lori
 ---
 
 Lori and I watched Die Hard 2 today and set it to Christmas music.
