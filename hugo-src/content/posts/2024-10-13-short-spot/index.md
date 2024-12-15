@@ -9,6 +9,7 @@ tags:
   - docker
   - openai
   - ffmpeg
+  - terminal
 ---
 
 # Short Spot: Ads Reimagined
