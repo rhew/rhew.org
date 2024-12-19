@@ -24,16 +24,6 @@ Oh, tidings of chaos and woe,
 Chaos and woe,  
 Oh, tidings of chaos and woe.  
 
-The janitor was first to fall,  
-He didn’t stand a chance.  
-McClane fought off the mercenaries,  
-But evil had advance.  
-The Windsor flight was doomed to burn,  
-Their fate sealed in a glance.  
-Oh, tidings of sorrow and dread,  
-Sorrow and dread,  
-Oh, tidings of sorrow and dread.  
-
 The traitor Grant betrayed his men,  
 Their loyalty misplaced.  
 He joined with Stuart’s deadly plan,  
