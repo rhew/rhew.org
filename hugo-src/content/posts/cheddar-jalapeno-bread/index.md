@@ -2,14 +2,13 @@
 title: "Cheddar Jalapeño Bread"
 date: 2024-11-28
 summary: "A spicy, cheesy delight made with fresh jalapeños and sharp cheddar, baked to perfection in a cast iron pan."
+cover: cheddar-jalapeno-bread.jpg
 tags: 
   - recipes
   - kenji
 ---
 
 This year for Thanksgiving, I skipped traditional dinner rolls and put my trusty pizza dough recipe to use in a new way. Inspired by Kenji's foolproof pan pizza recipe from Serious Eats (a personal favorite), I created two flavorful breads that became instant hits: **Cheddar Jalapeño** and [**Rosemary**]({{< ref "/posts/rosemary-bread" >}}).
-
-![Cheddar Jalapeño Bread](cheddar-jalapeno-bread.jpg)
 
 ## Ingredients
 - [Pan Pizza Dough]({{< ref "/posts/serious-eats-foolproof-pan-pizza" >}}). This recipe is for the **9-inch pan**.

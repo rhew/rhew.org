@@ -2,14 +2,13 @@
 title: "Crab Pizza"
 date: 2024-12-09
 summary: "A coastal-inspired pizza topped with fresh crab and Chesapeake flavors, bringing a taste of the sea to a perfect pan-baked crust."
+cover: crab-pizza.jpg
 tags: 
   - recipes
   - kenji
 ---
 
 Crab pizza is a savory twist on classic pan pizza, blending the rich flavors of fresh crab meat with a touch of Chesapeake-inspired seasoning. Based on Kenji’s foolproof dough, this recipe takes inspiration from the legendary Chesapeake Pizza at Bottom's Up Pizza in Historic Shockoe Bottom, delivering a mouthwatering taste of the coast in every bite.
-
-![Crab Pizza](crab-pizza.jpg)
 
 ## Ingredients
 - [Pan Pizza Dough]({{< ref "/posts/serious-eats-foolproof-pan-pizza" >}}). This recipe is for the **12-inch pan**.

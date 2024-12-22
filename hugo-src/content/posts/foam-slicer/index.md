@@ -5,6 +5,7 @@ tags:
   - supervillainy
   - crafts
 summary: "Enter my latest creation: a nichrome wire foam slicer powered by a bench power supply."
+cover: bond-slicer.gif
 ---
 
 Retirement offers the freedom to pursue one's *true calling*. For some, that means gardening or golf. For others, it’s perfecting tools of precision and destruction. Enter my latest creation: a nichrome wire foam slicer powered by a bench power supply. Elegant, efficient, and unnervingly precise.

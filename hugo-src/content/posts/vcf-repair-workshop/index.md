@@ -1,6 +1,8 @@
 ---
 title: "Operation Tektronix: The ADM-3A Revival"
 date: 2024-12-20
+summary: "Reviving my ADM-3A with its rare Tektronix 4010 emulation option at the VCF workshop—evil plans await!"
+cover: adm-3a.webp
 tags:
   - supervillainy
   - terminal
