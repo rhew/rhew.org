@@ -1,6 +1,7 @@
 ---
 title: "A Mansion Made for Nacho Lovers"
 date: 2024-12-27
+summary: Imagine a mansion designed for my niece who loves nachos—and I mean *really* loves nachos. 
 ---
 
 Welcome to the whimsical world of nachos! Imagine a mansion designed for my niece who loves nachos—and I mean *really* loves nachos. This mansion has everything a nacho enthusiast could dream of, from nacho cheese dispensers to a dining room made of nacho chips. Let's take a peek at some of the most fun and snack-filled spaces!

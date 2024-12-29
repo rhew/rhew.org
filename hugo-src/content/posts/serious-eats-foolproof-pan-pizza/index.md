@@ -1,6 +1,7 @@
 ---
 title: "Base Pan Pizza Recipe"
 date: 2024-12-09
+summary: This is my go-to base recipe for pan pizza and bread.
 tags:
 - recipes
 - kenji
