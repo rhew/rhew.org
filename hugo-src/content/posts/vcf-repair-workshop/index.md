@@ -2,7 +2,7 @@
 title: "Operation Tektronix: The ADM-3A Revival"
 date: 2024-12-20
 summary: "Reviving my ADM-3A with its rare Tektronix 4010 emulation option at the VCF workshop—evil plans await!"
-cover: adm-3a.webp
+cover: my-adm-3a.jpg
 tags:
   - supervillainy
   - terminal
@@ -14,6 +14,8 @@ tags:
 The Vintage Computer Federation (VCF) has announced a [repair workshop at System Source](https://vcfed.org/repair-workshops-at-system-source/) on January 18 and 19, 2025, and I, your benevolent overlord of retro computing shenanigans, shall be in attendance. Not merely as a participant, mind you, but as a harbinger of curiosity, chaos, and cunning plans. My weapon of choice? The ADM-3A terminal—complete with a hidden treasure that shall elevate its status from "quaint antique" to "artifact of diabolical brilliance."
 
 For those uninitiated in the ways of technological villainy, the ADM-3A is no ordinary terminal. Its curvaceous, one-piece design seduces onlookers with simplicity, but inside this specimen lies a secret weapon: a rare Tektronix 4010 emulation option. Yes, this seemingly humble piece of hardware harbors the soul of an early graphical marvel, perfect for plotting digital dominion.
+
+![RG-512](./rg-512.jpg)
 
 The plan is straightforward yet fiendishly clever:
 1. Transport the ADM-3A to the workshop under the guise of an innocent repair mission.
