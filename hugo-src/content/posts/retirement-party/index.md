@@ -5,6 +5,7 @@ summary: My wife, Lori, outdid herself, throwing me a supervillain-themed retire
 tags:
   - supervillainy
   - lori
+cover: minion.jpg
 ---
 
 My wife, Lori, outdid herself, throwing me a supervillain-themed retirement party that will surely cement my rise to infamy. Friends, family, coworkers, and neighbors joined me at a local spot in Cary, NC, where we plotted world domination over excellent food, drinks, and plenty of laughs.  
