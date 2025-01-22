@@ -71,4 +71,6 @@ Every villain needs a capable crew, and this mission wouldn’t have succeeded w
 ### Conclusion  
 The ADM-3A has risen from the depths of disrepair, with both text and graphics functionality restored and RS232 communication established. This is more than just a victory—it’s a testament to the power of collaboration, vintage tech, and the occasional maniacal laugh.
 
+![My Supervillain Tech Mastery badge!](./tech-mastery-badge.webp)
+
 Stay tuned for more evil schemes involving this marvelous terminal!
