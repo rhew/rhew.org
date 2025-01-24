@@ -1,7 +1,7 @@
 ---
 title: "Operation Tektronix: ADM-3A Revival Success!"
 date: 2025-01-19
-cover: vectors.jpg
+cover: rhew-the-day.jpg
 summary: "ADM-3A restored! Text, graphics, and RS232 communication now functional, thanks to VCF workshop heroes and a rare RG-512 graphics board."
 tags:
   - supervillainy
@@ -44,7 +44,9 @@ The adventure took place at **System Source in Maryland**, where the Vintage Com
 
 - Replaced a visibly bulging capacitor on the RG-512.
 - Reintegrated the RG-512 into the ADM-3A and entered vectors via keyboard.
-- Victory! The ADM-3A now **draws vectors** with precision.
+- Victory! The ADM-3A now **draws vectors**.
+
+![We have vectors!](./vectors.jpg)
 
 ### 3. Display Distortion
 - The screen was vertically squished at the top and expanded at the bottom.
