@@ -1,0 +1,78 @@
+
+509 Holtz Lane
+Cary NC. 27511
+
+
+James S. Rhew
+
+(919) 468-0037 
+jsrhew@ipass.net
+
+
+Objective
+To develop open systems software in a UNIX based environment
+
+Summary
+6 Years of experience developing telecommunications networking and database 
+software;  Emphasis in open systems, network management and distributed 
+database design
+
+Education
+  Graduated with honors with a Bachelors of Science Degree in Computer 
+Science at North Carolina State University
+
+Work 
+Tekelec Incorporated
+5/1995 - Present
+Experience
+  Served as Feature Engineer/Team Leader for Open Systems application 
+processor (OAP) features including:
+- Network management interfaces (SEAS and CMIP/CMISE)
+- Configuration of those interfaces from the Eagle STP user interface
+- Local Service Management System (LSMS) Disaster Recovery
+  Served as Build Coordinator for the OAP
+  Created installation, upgrade, build, manufacturing and troubleshooting 
+procedures for the OAP
+  Served as Feature Engineer for features on the Eagle STP including:
+- UPL parser, commands and test tools
+- Unreferenced gateway screening entity report
+- Command handlers for administration commands
+  Investigated and corrected Eagle STP and OAP problems as assigned
+
+
+International Business Machines Corporation 
+(Co-Op)
+1/1994 - 12/1994
+
+  Created a test tool and Motif GUI for the lowest layer of the APPN protocol 
+stack of the IBM 6611 router
+  Added commands to the router administration software as specified by the 
+architecture group
+  Maintained and provisioned routers in the lab
+
+
+North Carolina State University (Part Time)
+8/1993 - 12/1993
+
+  Ported BASIC code and created a Windows GUI for custom measurement 
+hardware for the Electrical Engineering Graduate program
+
+
+Allied Signal Incorporated (Co-Op)
+8/1991 - 12/1994
+
+  Designed, developed, and implemented an automated retrieval, grading, 
+reporting and archive system for engineered resins production data;  The 
+system remains the core software of the Quality Assurance department's 
+computing systems at the Chesterfield plant.
+  Configured, installed and supported network PCs throughout the plant
+
+Relevant 
+Skills
+Platforms: 	Solaris/SunOS, Linux, Embedded x86, Windows NT, 95/98, 3.1
+Languages: 	C, C++, Motif, Perl , Shell, Lex/Yacc
+
+Activities
+  Advisor to NCSU chapter of Theta Tau Professional Engineering Fraternity
+  Active in the Raleigh Perl Mongers
+

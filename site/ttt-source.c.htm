@@ -1,0 +1,390 @@
+<!-- $Id: ttt-source.html,v 1.2 1996/12/18 05:21:32 jaked Exp jaked $ -->
+
+<title>Tic Tac Toe Source</title>
+<h1>Tic Tac Toe Source</h1>
+
+<p>I get a lot of requests for the source to the tic tac toe game on
+my site, so I decided I would just web it. Caveats: this was the first
+AI-type game and the second CGI program I'd done, and I usually write
+prettier C code. But now I make a living as a Web programmer, so I
+must have learned something since then.
+
+<hr>
+<pre>
+#include &lt;stdlib.h&gt;
+#include &lt;stdio.h&gt;
+#include &lt;string.h&gt;
+
+/* WWW tic tac toe hack */
+
+/* cgi-bin util routines */
+void unescape_url(char *url);
+void plustospace(char *str);
+
+int vals[19683]; /* 3**9 -- not all positions are accesible, however */
+
+enum { Xwins=1, Owins=-1, Tie=2, None=0 };
+enum { X=1, O=-1 };
+
+int diff = 0, player = 0;
+char board[10];
+
+#define FHEAD "http://linex.com/~donham/ttt.files/"
+
+
+
+int board_to_int(board)
+     char *board;
+{
+  int i, out =0, exp=1;
+
+  for (i=0; i&lt;9; i++, exp *= 3) {
+    switch(board[i]) {
+    case '-': /* zero */
+      break;
+    case 'X': /* one */
+      out += exp * 1;
+      break;
+    case 'O': /* two */
+      out += exp * 2;
+    }
+  }
+
+  return out;
+}
+
+
+
+int test_won()
+{
+  int i, flag=0;
+  char *b = board;
+
+  if ((b[0] == 'X' && b[1] == 'X' && b[2] == 'X') ||
+      (b[3] == 'X' && b[4] == 'X' && b[5] == 'X') ||
+      (b[6] == 'X' && b[7] == 'X' && b[8] == 'X') || 
+      (b[0] == 'X' && b[3] == 'X' && b[6] == 'X') || 
+      (b[1] == 'X' && b[4] == 'X' && b[7] == 'X') || 
+      (b[2] == 'X' && b[5] == 'X' && b[8] == 'X') || 
+      (b[0] == 'X' && b[4] == 'X' && b[8] == 'X') || 
+      (b[2] == 'X' && b[4] == 'X' && b[6] == 'X'))
+    return Xwins;
+
+  if ((b[0] == 'O' && b[1] == 'O' && b[2] == 'O') ||
+      (b[3] == 'O' && b[4] == 'O' && b[5] == 'O') ||
+      (b[6] == 'O' && b[7] == 'O' && b[8] == 'O') || 
+      (b[0] == 'O' && b[3] == 'O' && b[6] == 'O') || 
+      (b[1] == 'O' && b[4] == 'O' && b[7] == 'O') || 
+      (b[2] == 'O' && b[5] == 'O' && b[8] == 'O') || 
+      (b[0] == 'O' && b[4] == 'O' && b[8] == 'O') || 
+      (b[2] == 'O' && b[4] == 'O' && b[6] == 'O'))
+    return Owins;
+
+  /* test for tie */
+  for (i=0; i&lt;9; i++) {
+    if (b[i] == '-')
+      flag=1;
+  }
+  if (!flag)
+    return Tie;
+
+  return None; /* game's not over */
+}
+
+
+
+int minimax(pl, depth)
+     int pl, depth;
+{
+  int best, val;
+  int i, index;
+
+  index = board_to_int(board);
+  if ((vals[index] % 10) &gt;= depth)
+    return vals[index] - (vals[index] % 10); /* since 0 is a valid value */
+  /* we don't want use the memoized value if it is shallower than
+   * we're allowed to go--in fact, this doesn't matter since the memoization
+   * goes away with each move, but otherwise it would.
+   */
+
+  if (depth &gt; diff)
+    return 0;
+
+  if ((val = test_won(board)) != None) {
+    switch(val) {
+    case Xwins:
+    case Owins:
+      return 1000 * val;
+    case Tie:
+      return 0;
+    }
+  }
+
+  best = -pl * 1000000;
+  for (i=0; i&lt;9; i++) {
+    if (board[i] == '-') {
+      board[i] = (pl == X) ? 'X' : 'O';
+      val = minimax(-pl, depth+1);
+      if (val * pl &gt; best * pl)
+	best = val;
+      board[i] = '-';
+    }
+  }
+  
+  vals[index] = best + depth;
+  return best;
+}
+
+
+
+find_move()
+{
+  int best, val, besti[9], i, bestcount = 0;
+  int pl = -player; /* find the computer's move, not the player's */
+
+  best = -pl * 1000000;
+  for (i=0; i&lt;9; i++) {
+    if (board[i] == '-') {
+      board[i] = (pl == X) ? 'X' : 'O';
+      val = minimax(-pl, 1);
+      if (val == best) {
+	best = val;
+	besti[bestcount++] = i;
+      }
+      else if (val * pl &gt; best * pl) {
+	best = val;
+	bestcount = 0;
+	besti[bestcount++] = i;
+      }
+      board[i] = '-';
+    }
+  }
+  i = random()%bestcount;
+
+  board[besti[i]] = (pl == X) ? 'X' : 'O';
+}
+
+
+
+output(won)
+     int won;
+{
+  int i, j;
+
+  printf("&lt;TITLE&gt;Tic Tac Toe&lt;/TITLE&gt;\n&lt;center&gt;&lt;H1&gt;Tic Tac Toe&lt;/H1&gt;\n");
+  printf("&lt;p&gt;You are %s.\n", (player == X) ? "X's" : "O's");
+  printf("&lt;p&gt;&lt;table border&gt;");
+
+  for (j=0; j&lt;3; j++) {
+    printf("&lt;tr&gt;");
+    for (i=0; i&lt;3; i++) {
+      printf("&lt;td&gt;");
+      if (board[j*3+i] == '-') {
+	if (won == None) {
+	  board[j*3 + i] = (player == O) ? 'O' : 'X';
+	  printf("&lt;a href = \"ttt?d=%c&p=%c&b=%s\"&gt;",
+		 diff+'0', (player == O) ? 'O' : 'X', board);
+	  printf("&lt;img src = \"%se.gif\" border=0&gt;&lt;/a&gt;\n", FHEAD);
+	  board[j*3 + i] = '-';
+	}
+	else {
+	  printf("&lt;img src = \"%se.gif\" border=0&gt;\n", FHEAD);
+	}
+      }
+      else {
+	printf("&lt;img src = \"%s%c.gif\" border=0&gt;\n",
+	       FHEAD,
+	       board[j*3+i] == 'X' ? 'x' : 'o');
+      }
+      printf("&lt;/td&gt;");
+    }
+    printf("&lt;/tr&gt;");
+  }
+
+  printf("&lt;/table&gt;\n");
+
+  if (won != None) {
+    printf("&lt;form method=\"get\" action=\"/~donham/ttt.html\"&gt;\n");
+    printf("&lt;p&gt;%s won.\n",
+	   won == Tie ? "Nobody" : (won == player ? "You" : "I"));
+    printf("Press &lt;input type=\"submit\" value=\"Play\"&gt; to play again.\n");
+    printf("&lt;/form&gt;\n");
+  }
+
+  printf("&lt;hr&gt;&lt;a href = \"/~donham/index.html\"&gt;Home&lt;/a&gt; -&gt; Tic Tac Toe\n");
+  printf("&lt;/center&gt;");
+
+}
+  
+
+
+die(arg)
+     char *arg;
+{
+  printf("&lt;title&gt;Tic Tac Toe&lt;/title&gt;\n&lt;p&gt;Error: %s\n", arg);
+  exit(0);
+}
+
+
+/* fixed up getword which takes buffer size arg */
+void getword2(word, size, line, stop)
+     char *word, *line, stop;
+     int size;
+{
+    int x = 0,y;
+    --size; /* leave room for NUL */
+    for(x=0;((line[x]) && (line[x] != stop));x++)
+      if (x &lt; size)
+        word[x] = line[x];
+
+    if (x &lt; size)
+      word[x] = '\0';
+    else
+      word[size] = '\0';
+
+    if(line[x]) ++x;
+    y=0;
+
+    while(line[y++] = line[x++]);
+}
+
+void process_query()
+{
+  char *cl, *rm, buf[100], name[100];
+  int df = 0, pf = 0, bf = 0;
+  int i;
+
+  if ((rm = getenv("REQUEST_METHOD")) == 0)
+    die("No request method.\n");
+  if (strcmp(rm, "GET") != 0)
+    die("Script not referenced with GET method.\n");
+
+  if ((cl = getenv("QUERY_STRING")) == 0)
+    die("No query string.\n");
+
+  while (cl[0] != 0) {
+    getword2(buf, 100, cl, '&');
+    plustospace(buf);
+    unescape_url(buf);
+    getword2(name, 100, buf, '=');
+
+    switch (name[0]) {
+
+    case 'd':
+      switch (buf[0]) {
+      case '1':
+      case '2':
+      case '9':
+	diff = buf[0] - '0';
+	break;
+      default:
+	die("Bad query string.\n");
+      }
+      df = 1;
+      break;
+
+    case 'p':
+      switch(buf[0]) {
+      case 'X':
+	player = X;
+	break;
+      case 'O':
+	player = O;
+	break;
+      default:
+	die("Bad query string.\n");
+      }
+      pf = 1;
+      break;
+
+    case 'b':
+      strncpy(board, buf, 10);
+      board[10] = 0;
+      for (i = 0; i &lt; 9; i++)
+	switch (board[i]) {
+	case 'O':
+	case 'X':
+	case '-':
+	  break;
+	default:
+	  die("Bad query string.\n");
+	}
+      bf = 1;
+      break;
+
+    default:
+      die("Bad query string.\n");
+    }
+  }
+
+  if (!df)
+    diff = 2;
+  if (!pf)
+    player = X;
+  if (!bf)
+    strcpy(board, "---------");
+}
+
+
+
+main(argc, argv)
+     int argc;
+     char **argv;
+{
+  int won, i;
+
+  printf("Content-type: text/html\n\n");
+
+  process_query();
+  
+  if (strcmp(board, "---------") == 0 && player == X) {
+    output(0);                /* first move--empty board */
+    exit(0);
+  }
+  else if ((won = test_won()) != None) {   /* last move ended game */
+    output(won);
+    exit(0);
+  }
+  else {
+    srandom(getpid());
+    find_move();                   /* puts the move into board */
+    won = test_won();
+    output(won);
+    exit(0);
+  }
+}
+
+/* from NCSA httpd util.c */
+
+char x2c(char *what) {
+    register char digit;
+
+    digit = (what[0] >= 'A' ? ((what[0] & 0xdf) - 'A')+10 : (what[0] - '0'));
+    digit *= 16;
+    digit += (what[1] >= 'A' ? ((what[1] & 0xdf) - 'A')+10 : (what[1] - '0'));
+    return(digit);
+}
+
+void unescape_url(char *url) {
+    register int x,y;
+
+    for(x=0,y=0;url[y];++x,++y) {
+        if((url[x] = url[y]) == '%') {
+            url[x] = x2c(&url[y+1]);
+            y+=2;
+        }
+    }
+    url[x] = '\0';
+}
+
+void plustospace(char *str) {
+    register int x;
+
+    for(x=0;str[x];x++) if(str[x] == '+') str[x] = ' ';
+}
+</pre>
+<hr>
+<center>
+<a href="./">Home</a> -> <a href="ttt.html">Tic Tac Toe</a> -> Tic
+Tac Toe Source
+</center>

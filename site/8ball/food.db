@@ -1,0 +1,50 @@
+China Express		time=medium	type=chineese	cost=$
+On the Border		time=long	type=mexican	cost=$$$
+Airport Mall	time=short	type=variety	cost=$
+Cary Mall Foodcourt	time=long	type=variety	cost=$
+Deli Box		time=short	type=deli	cost=$$
+El Rodeo		time=medium	type=mexican	cost=$
+El Dorado		time=medium	type=mexican	cost=$
+Los Tres		time=medium	type=mexican	cost=$
+Tico's Pizza		time=short	type=pizza	cost=$
+Pizza Inn		time=medium	type=pizza	type=buffet	cost=$$
+New York Pizza		time=short	type=pizza	cost=$$
+35			time=medium	type=chineese	type=buffet	cost=$$
+Sara's Empenadas	time=medium	type=south american	cost=$$
+Wendy's			time=short	type=fastfood	cost=$
+Davis BBQ		time=short	type=BBQ	cost=$$
+Golden Corral (70)	type=buffet	type=variety
+Golden Corral (54)	type=buffet	type=variety
+Chili's (70)		type=YABAG
+Chili's (Kildare)	type=YABAG
+Jersey Mike's		type=deli
+Pizza Hut (Cary)	type=pizza
+Ritchie's		time=short	type=deli	cost=$$
+1920 Deli		time=medium	type=deli
+Upper Deck		type=sports bar
+Champions		type=sports bar
+Woody's			type=sports bar
+Ragazzi's		type=italian
+Chic-Fil-A		time=medium	type=fastfood	cost=$
+Remmington Grill	cost=$$	time=medium	type=YABAG
+Schlotskys		cost=$$	time=medium	type=deli
+Arby's			cost=$	time=medium	type=sandwich
+Fat Daddy's		cost=$$	time=medium	type=burgers
+Waffle House	cost=$$	time=short	type=variety
+Cappi's	cost=$	time=short	type=deli
+Old Time BBQ	cost=Damn cheap	time=short	type=BBQ
+Manhatten	cost=$$	time=medium	type=deli
+Texas Steak House	cost=$$	time=short	type=Steak
+Ci Ci's pizza	cost=$	time=medium	type=pizza
+Harrisons	cost=$	time=medium	type=sports bar
+Pizza Pasta Cafe	cost=$	time=medium	type=pizza
+Amante	cost=$	time=medium	type=pizza
+Torerros	cost=$	time=long	type=mexican
+Coyote Cafe	cost=$$$	time=long	type=mexican
+Coyote Cafe	cost=$$$	time=long	type=mexican
+Bear Rock Cafe	cost=$	time=short	type=deli
+Amante	cost=$	time=medium	type=pizza
+D'Nardys	cost=$$	time=short	type=variety
+Dakota Grill	cost=$	time=short	type=variety
+Rudino's	cost=$	time=medium	type=pizza
+Cracker Barrel	cost=$$	time=short	type=Bubba

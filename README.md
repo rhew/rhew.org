@@ -16,7 +16,7 @@ touch stripper-secrets.env
 
 ```
 make rhew.org-local
-docker-compose -f compose.yml -f compose.local.yml up rhew.org 
+docker compose -f compose.yml -f compose.local.yml up rhew.org 
 curl https://localhost
 curl https://localhost/projects
 ```
@@ -41,7 +41,7 @@ popd
 ```
 cd rhew.org
 git pull origin main
-docker-compose build
+docker compose build
 ```
 
 ## Configure secrets
@@ -51,9 +51,9 @@ docker-compose build
 
 ## Run
 ```
-docker-compose up -d rhew.org
-docker-compose up -d manager
-docker-compose up -d stripper
+docker compose up -d rhew.org
+docker compose up -d manager
+docker compose up -d stripper
 ```
 
 # Notes
