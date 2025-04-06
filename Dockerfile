@@ -1,4 +1,6 @@
-FROM alpine:latest as builder
+
+
+FROM alpine:latest as hugo-builder
 RUN apk add --update hugo
 
 WORKDIR /var/hugo
@@ -17,4 +19,4 @@ RUN hugo --minify
 FROM caddy:2.8
 COPY Caddyfile /etc/caddy/Caddyfile
 COPY site /usr/share/caddy
-COPY --from=builder /var/hugo/public /usr/share/caddy/projects
+COPY --from=hugo-builder /var/hugo/public /usr/share/caddy/projects

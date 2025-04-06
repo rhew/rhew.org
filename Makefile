@@ -6,7 +6,7 @@ SHELL := /bin/bash
 all: rhew.org
 
 rhew.org:
-	docker compose build rhew.org
+	docker compose build rhew.org 8ball
 
 rhew.org-local:
-	docker compose -f compose.yml -f compose.local.yml build rhew.org
+	docker compose -f compose.yml -f compose.local.yml build rhew.org 8ball

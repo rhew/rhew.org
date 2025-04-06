@@ -3,6 +3,9 @@ rhew.org {
     basic_auth /podcasts/* {
         {$PODCAST_USER} {$PODCAST_PASSWORD_HASH}
     }
+
+    reverse_proxy /cgi-bin/food.cgi 8ball:7283
+
     file_server
 }
 

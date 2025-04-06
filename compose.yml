@@ -13,6 +13,18 @@ services:
     volumes:
       - podcasts:/usr/share/caddy/podcasts
       - caddy-data:/data
+    networks:
+      - reverse_proxy
+  8ball:
+    build:
+      context: 8ball
+      dockerfile: Dockerfile
+    ports:
+      - "7283:7283"
+    container_name: 8ball
+    networks:
+      - reverse_proxy
+    restart: unless-stopped
   stripper:
     image: stripper
     container_name: stripper
@@ -33,6 +45,10 @@ services:
     environment:
       INTERVAL: '3600'
       PODCAST_ROOT: 'https://rhew.org/podcasts'
+
+networks:
+  reverse_proxy:
+    driver: bridge
 
 volumes:
   podcasts:
