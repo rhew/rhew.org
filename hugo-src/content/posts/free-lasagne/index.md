@@ -2,6 +2,7 @@
 title: "Free Lasagna"
 date: 2025-05-25
 description: "A hearty, flavorful lasagna made without gluten, alliums, or cow dairy. Serves 6."
+cover: lasagne.jpg
 tags:
   - recipes
 ---
