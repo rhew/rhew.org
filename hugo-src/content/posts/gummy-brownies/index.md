@@ -1,6 +1,6 @@
 ---
 title: "Gummy’s Brownies"
-date: 2025-05-25
+date: 2025-05-26
 summary: "My grandmother's recipe that my Uncle Joel makes for us at the beach!"
 tags: 
   - recipes
