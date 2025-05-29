@@ -16,7 +16,7 @@ RUN git clone https://github.com/martignoni/hugo-video.git themes/hugo-video
 RUN hugo --minify
 
 
-FROM caddy:2.8
+FROM caddy:2.10
 COPY Caddyfile /etc/caddy/Caddyfile
 COPY site /usr/share/caddy
 COPY --from=hugo-builder /var/hugo/public /usr/share/caddy/projects
