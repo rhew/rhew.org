@@ -1,12 +1,16 @@
 ---
 title: "Globat sucks"
 date: 2022-12-31
-lastmod: 2025-03-19
+lastmod: 2025-04-06
 summary: Globat deleted all the content from rhew.org.
 tags:
   - rhew.org
   - globat
   - backups
+---
+
+April 2025 UPDATE: I re-implemented the [Gastric 8-ball](https://rhew.org/cgi-bin/food.cgi) and other Perl CGI scripts in Go.
+
 ---
 
 March 2025 UPDATE: I located a backup and restored the content! The Perl CGI scripts will have to wait for me to re-implement in something more... modern.
