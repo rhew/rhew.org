@@ -7,6 +7,7 @@ tags:
   - supervillainy
   - terminal
   - adm-3a
+  - retirement
 ---
 
 Minions and enthusiasts, gather 'round for an update on the diabolical resurrection of my ADM-3A terminal. With a rare **RG-512 optional graphics board** onboard, this mission was destined for greatness—or at least for copious soldering and caffeine. Here’s the story of triumph, trials, and a band of capable minions who made it all possible.

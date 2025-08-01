@@ -5,6 +5,7 @@ summary: My wife, Lori, outdid herself, throwing me a supervillain-themed retire
 tags:
   - supervillainy
   - lori
+  - retirement
 cover: minion.jpg
 ---
 

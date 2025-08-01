@@ -10,6 +10,7 @@ tags:
   - rockets
   - adm-3a
   - terminal
+  - retirement
 ---
 
 Since embracing my new role as a professional antagonist with a flair for eccentricity, I've decided to assemble a bucket list of shenanigans worthy of my diabolical retirement. Here are the schemes in the works:
