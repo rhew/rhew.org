@@ -23,4 +23,4 @@ Naturally, I asked AI to render a tattoo of the BurgerRobs logo.
 
 When I showed the result to the server, she insisted I send it to Rob. She suggested that I might get burgers for life if I actually got the tattoo.
 
-This prospect comes with an obvious caveat: a lifetime supply of BurgerRobs burgers may, shorten the very life it supplies. The nine hour drive would only slow me down a little bit.
+This prospect comes with an obvious caveat: a lifetime supply of BurgerRobs burgers may shorten the very life it supplies. The nine hour drive would only slow me down a little bit.
