@@ -10,14 +10,17 @@ tags:
   - retirement
 ---
 
-Flight Report
+# Flight Report
 
 - **Amtrak flaked.** They downgraded my sleeper to coach at the last second.  
 - **Frontier beckoned.** Same price, unlimited potential for regret.
-- **Website check-in checked out.** Two devices, two spinning bears.  
+- **Website check-in checked out.** Two devices, two spinning bears.
 - **Inconvenience fee.** Frontier literally charged _me_ $25 for their IT outage.
-- **Zone-1 stampede.** Turns out anyone who buys a carry-on (or just blinks twice) is Zone 1. Result: a 200-person conga line from every Frontier gate blocking deplaning passengers.<br> _gate agent sips LaCroix_
-- **On-board bazaar.** Flight attendants hustled pretzels, soft drinks, and credit cards. Hydration? \$4.39. Oxygen still complimentary, for now.
+- **Zone-1 stampede.** Turns out anyone who buys a carry-on (or just blinks twice) is Zone 1. Result: 200-person conga lines from each Frontier gate. Chaos spreads!
+- **On-board bazaar.** Flight attendants hustled pretzels, soft drinks, and credit cards. After the merger, I'll put a card swipe on the Oxygen masks.
 
-Verdict: Frontier doesn’t merely nickel-and-dime, they monetize the very friction they cause. That’s strategic villainy.
+Frontier monetizes the very friction they cause. That’s strategic villainy.
 
+# Bonus
+
+Can you imagine something so insidious that even _I_ feel ethically obligated not to disclose it? ...yet.
