@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<title>Leaflet Map</title>
+<meta name="viewport" content="width=device-width,initial-scale=1"/>
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+      integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin=""/>
+<style>
+  html, body, #map { height: 100%; margin: 0; }
+  .popup-img { max-width: 240px; width: 100%; height: auto; display:block; margin-top: 6px; border-radius: 4px; }
+</style>
+</head>
+<body>
+<div id="map"></div>
+
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+        integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+<script>
+  const GEOJSON = {"type": "FeatureCollection", "features": [{"type": "Feature", "geometry": {"type": "Point", "coordinates": [-78.78342777777777, 35.846669444444444]}, "properties": {"name": "PXL_20251029_150949606.jpg", "imgur_url": "https://i.imgur.com/2lznROj.jpeg"}}, {"type": "Feature", "geometry": {"type": "Point", "coordinates": [-78.78302777777778, 35.845755555555556]}, "properties": {"name": "PXL_20251029_151234420.jpg", "imgur_url": "https://i.imgur.com/X3lnP5C.jpeg"}}, {"type": "Feature", "geometry": {"type": "Point", "coordinates": [-78.78123055555555, 35.84572222222222]}, "properties": {"name": "PXL_20251029_153213271.jpg", "imgur_url": "https://i.imgur.com/p5k4UMl.jpeg"}}, {"type": "Feature", "geometry": {"type": "Point", "coordinates": [-78.78134722222222, 35.845172222222224]}, "properties": {"name": "PXL_20251029_153322912.jpg", "imgur_url": "https://i.imgur.com/DfQBwpd.jpeg"}}, {"type": "Feature", "geometry": {"type": "Point", "coordinates": [-78.78249722222222, 35.8514]}, "properties": {"name": "PXL_20251029_164932014.jpg", "imgur_url": "https://i.imgur.com/cvV7WQ4.jpeg"}}, {"type": "Feature", "geometry": {"type": "Point", "coordinates": [-78.77989166666667, 35.84965833333334]}, "properties": {"name": "PXL_20251029_171316304.jpg", "imgur_url": "https://i.imgur.com/IpJ7dMq.jpeg"}}]};
+
+  const map = L.map('map', { preferCanvas: true });
+
+  const osm = L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+    maxZoom: 19,
+    attribution: '© OpenStreetMap'
+  }).addTo(map);
+
+  // Waymarked MTB overlay
+  const waymarked = L.tileLayer('https://tile.waymarkedtrails.org/mtb/{z}/{x}/{y}.png', {
+    attribution: '© Waymarked Trails • © OSM'
+  }).addTo(map);
+
+  const layer = L.geoJSON(GEOJSON, {
+    pointToLayer: (feature, latlng) => L.marker(latlng),
+    onEachFeature: (feature, layer) => {
+      const p = feature.properties || {};
+      const name = p.name || 'Photo';
+      const url = p.imgur_url || p.url || null;
+      const img = url ? `<a href="${url}" target="_blank" rel="noopener">
+                           <img class="popup-img" src="${url}" alt="${name}">
+                         </a>` : '';
+      layer.bindPopup(`<strong>${name}</strong>${img}`);
+      layer.bindTooltip(name, { direction: 'top', offset: [0, -8] });
+    }
+  }).addTo(map);
+
+  const b = layer.getBounds();
+  if (b.isValid()) map.fitBounds(b.pad(0.25));
+  else map.setView([35.84, -78.784], 14);
+
+  L.control.layers({ 'OpenStreetMap': osm }, { 'Waymarked MTB': waymarked }, { collapsed: false }).addTo(map);
+  L.control.scale().addTo(map);
+</script>
+</body>
+</html>
