@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<title>Leaflet Map</title>
+<meta name="viewport" content="width=device-width,initial-scale=1"/>
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+      integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin=""/>
+<style>
+  html, body, #map { height: 100%; margin: 0; }
+  .popup-img { max-width: 240px; width: 100%; height: auto; display:block; margin-top: 6px; border-radius: 4px; }
+</style>
+</head>
+<body>
+<div id="map"></div>
+
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+        integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+<script>
+  const GEOJSON = {"type": "FeatureCollection", "features": [{"type": "Feature", "geometry": {"type": "Point", "coordinates": [-78.78277222222222, 35.84595]}, "properties": {"name": "PXL_20251209_185910633.MP.jpg", "imgur_url": "https://i.imgur.com/tUrogr8.jpeg"}}, {"type": "Feature", "geometry": {"type": "Point", "coordinates": [-78.7831, 35.84565833333333]}, "properties": {"name": "PXL_20251209_191238999.jpg", "imgur_url": "https://i.imgur.com/VKp3uzq.jpeg"}}, {"type": "Feature", "geometry": {"type": "Point", "coordinates": [-78.78311388888889, 35.846044444444445]}, "properties": {"name": "PXL_20251209_192515580.jpg", "imgur_url": "https://i.imgur.com/TAUANGQ.jpeg"}}, {"type": "Feature", "geometry": {"type": "Point", "coordinates": [-78.78529444444445, 35.85124166666667]}, "properties": {"name": "PXL_20251209_193623943.jpg", "imgur_url": "https://i.imgur.com/Sq6nKh6.jpeg"}}, {"type": "Feature", "geometry": {"type": "Point", "coordinates": [-78.78529444444445, 35.85124166666667]}, "properties": {"name": "PXL_20251209_193631341.jpg", "imgur_url": "https://i.imgur.com/sNcqkz1.jpeg"}}, {"type": "Feature", "geometry": {"type": "Point", "coordinates": [-78.78220833333333, 35.85108888888889]}, "properties": {"name": "PXL_20251209_194757727.jpg", "imgur_url": "https://i.imgur.com/0xG3ubQ.jpeg"}}, {"type": "Feature", "geometry": {"type": "Point", "coordinates": [-78.78243611111111, 35.851286111111115]}, "properties": {"name": "PXL_20251209_194947635.jpg", "imgur_url": "https://i.imgur.com/NIF3WlZ.jpeg"}}, {"type": "Feature", "geometry": {"type": "Point", "coordinates": [-78.78130277777778, 35.84880277777778]}, "properties": {"name": "PXL_20251209_195521108.jpg", "imgur_url": "https://i.imgur.com/ae8jkQ8.jpeg"}}]};
+
+  const map = L.map('map', { preferCanvas: true });
+
+  const osm = L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+    maxZoom: 19,
+    attribution: '© OpenStreetMap'
+  }).addTo(map);
+
+  // Waymarked MTB overlay
+  const waymarked = L.tileLayer('https://tile.waymarkedtrails.org/mtb/{z}/{x}/{y}.png', {
+    attribution: '© Waymarked Trails • © OSM'
+  }).addTo(map);
+
+  const layer = L.geoJSON(GEOJSON, {
+    pointToLayer: (feature, latlng) => L.marker(latlng),
+    onEachFeature: (feature, layer) => {
+      const p = feature.properties || {};
+      const name = p.name || 'Photo';
+      const url = p.imgur_url || p.url || null;
+      const img = url ? `<a href="${url}" target="_blank" rel="noopener">
+                           <img class="popup-img" src="${url}" alt="${name}">
+                         </a>` : '';
+      layer.bindPopup(`<strong>${name}</strong>${img}`);
+      layer.bindTooltip(name, { direction: 'top', offset: [0, -8] });
+    }
+  }).addTo(map);
+
+  const b = layer.getBounds();
+  if (b.isValid()) map.fitBounds(b.pad(0.25));
+  else map.setView([35.84, -78.784], 14);
+
+  L.control.layers({ 'OpenStreetMap': osm }, { 'Waymarked MTB': waymarked }, { collapsed: false }).addTo(map);
+  L.control.scale().addTo(map);
+</script>
+</body>
+</html>
