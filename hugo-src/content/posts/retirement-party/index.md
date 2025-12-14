@@ -6,6 +6,7 @@ tags:
   - supervillainy
   - lori
   - retirement
+  - minion
 cover: minion.jpg
 ---
 
