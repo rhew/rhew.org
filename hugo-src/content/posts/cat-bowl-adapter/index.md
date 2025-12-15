@@ -15,7 +15,9 @@ My feline minions demanded ergonomic dining, and I am nothing if not a benevolen
 
 I designed and printed an adapter that does two things with ruthless efficiency: it mates the stand’s holes to the bowls I already owned, and it tilts the bowls a satisfying **30 degrees** so whiskers and spine stay aligned while they refuel for future henchwork.
 
-![Tilted bowl adapter for feline minions](cat-bowl-adapter.jpg)
+Parametric model for your own feline forces: [Tilted Cat Food Adapter](https://www.printables.com/model/1506588-tilted-cat-food-adapter).
+
+![Rendered tilted bowl adapter](rendered-cat-bowl-adapter.webp)
 
 ## Field Test Report
 
