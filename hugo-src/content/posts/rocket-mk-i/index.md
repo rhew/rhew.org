@@ -13,8 +13,6 @@ tags:
 
 Nate has been promoted from henchling to apprentice, so we set out to build a disposable terror torpedo out of household scraps and hubris. The result: the **Paper Towel Tube Rocket Mk I**, a villainous proof-of-concept for future orbital mischief. Bobby joined the lair crew to troubleshoot the wiring and batteries after a few sulky ignitors.
 
-![Mk I disassembled after flight testing](rocket-mk-i.jpg)
-
 ## Design dossier
 
 - Airframe: a noble paper towel tube, now artfully charred after two launches.  
