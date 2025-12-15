@@ -1,13 +1,14 @@
 ---
 title: "Paper Towel Tube Rocket Mk I"
-date: 2025-12-15
+date: 2025-11-30
 summary: "A field test of a paper towel tube rocket co-built with Nate."
 cover: "rocket-mk-i.jpg"
 tags:
   - supervillainy
   - rockets
+  - 3d-printing
+  - minion
   - nate
-  - maker
 ---
 
 Nate has been promoted from henchling to apprentice, so we set out to build a disposable terror torpedo out of household scraps and hubris. The result: the **Paper Towel Tube Rocket Mk I**, a villainous proof-of-concept for future orbital mischief. Bobby joined the lair crew to troubleshoot the wiring and batteries after a few sulky ignitors.
