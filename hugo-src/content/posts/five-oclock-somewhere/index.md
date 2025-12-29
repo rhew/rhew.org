@@ -1,6 +1,7 @@
 ---
 title: "Time, Gin, and Villainy: A Retirement Gift Upgrade"
 date: 2025-02-22
+lastmod: 2025-12-29
 cover: nixie-clock.jpg
 tags:
   - supervillainy
@@ -18,7 +19,7 @@ The loot?
 ### Upgrading the Nixie Clock for Shenanigans  
 After assembling it, I enshrined it a **Rhew the Day** signature case. Because branding matters.  
 
-Then came the final touch: a **firmware tweak** that allows me time travel to 17:00. A simple press, and it’s officially gin o’clock.
+Then came the final touch: a **firmware tweak** that allows me time travel to 17:00. A simple press, and it’s officially gin o’clock. The change lives on my fork: [IN-12 Nixie Clock firmware, five-oclock-somewhere branch](https://github.com/rhew/IN-12NixieClock/tree/five-oclock-somewhere).
 
 {{< video src="nixie-clock.webm" >}}
 
