@@ -1,8 +1,9 @@
 ---
 title: "Paper Towel Tube Rocket Mk I"
 date: 2025-11-30
+lastmod: 2025-12-29
 summary: "A field test of a paper towel tube rocket co-built with Nate."
-cover: "rocket-mk-i.jpg"
+cover: "rocket-mk-i-clean.jpg"
 tags:
   - supervillainy
   - rockets
@@ -26,6 +27,8 @@ Full schematics live on Printables: [Paper Towel Tube Rocket Mk I](https://www.p
 ## Field report
 
 Launch one: the ignitor sulked, Bobby rewired, and the rocket finally leapt skyward. The parachute refused to deploy, turning the descent into a ballistic lesson in gravity. Launch two: improved ignition, still no parachute, but the airframe survived with only fashionable burn marks. The astronaut is now shorter—but morale remains high.
+
+![Recovered parts after two launches](rocket-mk-i.jpg)
 
 ## Renderings from the lair
 
