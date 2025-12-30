@@ -1,6 +1,7 @@
 ---
 title: "AI DND with Nate"
 date: 2025-04-03
+lastmod: 2025-04-07
 summary: We made AI the dungeon master and had a good time.
 cover: crab-attack.jpg
 

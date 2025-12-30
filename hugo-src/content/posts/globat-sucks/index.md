@@ -1,7 +1,7 @@
 ---
 title: "Globat sucks"
 date: 2022-12-31
-lastmod: 2025-04-06
+lastmod: 2025-05-30
 summary: Globat deleted all the content from rhew.org.
 tags:
   - rhew.org

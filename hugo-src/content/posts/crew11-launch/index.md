@@ -1,6 +1,7 @@
 ---
 title: "Crew-11: One Retirement Goal, Two Launch Days"
 date: 2025-08-02
+lastmod: 2025-08-04
 summary: "Catching SpaceX Crew-11 from the Apollo/Saturn V Center, complete with a weather scrub, a next-day liftoff, and a Saturn V overhead."
 tags:
   - retirement

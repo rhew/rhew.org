@@ -1,6 +1,7 @@
 ---
 title: "Frontier Airlines: If you can't beat airline despair, merge with it"
 date: 2025-08-02
+lastmod: 2025-08-03
 summary: "Frontier’s brand of cheerful extortion might be exactly the kind of evil my super-villain empire needs."
 cover: "bear-with-us.png"
 tags:

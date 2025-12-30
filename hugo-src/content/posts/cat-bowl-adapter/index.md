@@ -1,6 +1,7 @@
 ---
 title: "Tilted Rations for Loyal Minions"
 date: 2025-12-06
+lastmod: 2025-12-29
 tags:
   - supervillainy
   - cats

@@ -1,6 +1,7 @@
 ---
 title: "God Rest Ye Merry Passengers"
 date: 2024-12-14
+lastmod: 2024-12-19
 summary: Lori and I watched Die Hard 2 today. Let's sing about it.
 tags:
   - supervillainy
