@@ -32,8 +32,4 @@ Launch one: the ignitor sulked, Bobby rewired, and the rocket finally leapt skyw
 
 ## Renderings from the lair
 
-![Fin and engine bay assembly](fin-engine-assembly.webp)
-
-![Nose cone glamor shot](nose-cone.webp)
-
-![Dual launch rail guides for maximum stability](rail.webp)
+![plans](rocket-plans.png)
