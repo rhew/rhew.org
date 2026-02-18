@@ -1,7 +1,11 @@
 ---
 title: "The Cardboard Guardians Fall"
 date: 2025-10-12
-tags: ["halloween", "supervillainy", "evil overlord", "crafts", "minion"]
+tags:
+  - halloween
+  - supervillainy
+  - crafts
+  - minion
 cover: "new-monsters.jpg"
 description: "After more than a decade of faithful service, the cardboard sentinels have been replaced with new foam creations fit for a modern villain."
 ---
