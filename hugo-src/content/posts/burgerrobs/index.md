@@ -8,6 +8,7 @@ tags:
   - supervillainy
   - rockets
   - lori
+  - ai
 ---
 
 [A stray cumulus cloud scrubbed the SpaceX Crew-11 launch at T-1](https://spaceflightnow.com/2025/07/31/live-coverage-nasa-spacex-to-launch-crew-11-mission-to-the-international-space-station-on-a-falcon-9-rocket-from-the-kennedy-space-center/), which meant another night in Titusville and an unexpected detour to [BurgerRobs](https://www.burgerrobshq.com/) downtown. 

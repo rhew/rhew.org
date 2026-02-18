@@ -6,6 +6,7 @@ summary: We made AI the dungeon master and had a good time.
 cover: crab-attack.jpg
 tags:
   - supervillainy
+  - ai
   - 3d-printing
   - nate
   - cats

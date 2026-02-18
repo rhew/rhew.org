@@ -6,6 +6,7 @@ cover: tabitha-scooby.jpg
 tags:
   - crafts
   - lori
+  - halloween
 ---
 
 # The Mystery Machine: A Halloween Tale of Craft Supplies and Canine Commitment

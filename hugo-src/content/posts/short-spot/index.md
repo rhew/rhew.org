@@ -7,7 +7,7 @@ tags:
   - podcasts
   - code
   - docker
-  - openai
+  - ai
   - ffmpeg
   - terminal
 ---

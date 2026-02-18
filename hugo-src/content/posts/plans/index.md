@@ -6,7 +6,7 @@ summary: I've decided to assemble a bucket list of shenanigans worthy of my diab
 cover: plans.webp
 tags:
   - supervillainy
-  - mountainbiking
+  - mountain-biking
   - rockets
   - adm-3a
   - terminal
@@ -50,4 +50,3 @@ The **Lake Crabtree County Park** trails are in need of some tender, loving care
 ---
 
 These plans are but the start of my master list. Villainy is a lifelong endeavor, after all, and my retirement is just the prologue to a thousand capers. Stay tuned for updates as my schemes unfold. Suggestions for additional escapades are, of course, always welcome.
-
