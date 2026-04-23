@@ -31,13 +31,13 @@ Charcoal Blue (Sherwin-Williams SW 2739)
 
 ![House color swatch](charcoal-blue.svg)
 
-## Soffit color
+## Screened porch support, deck railing, and soffit color
 
 Web Gray (Sherwin-Williams SW 7075)
 
 ![Soffit color swatch](web-gray.svg)
 
-## Existing trim color
+## Existing window and door frame color
 
 Cashmere (Marvin Essential Finish)
 
