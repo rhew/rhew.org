@@ -23,7 +23,7 @@ Therma-Tru Smooth-Star S2000 Flush Fiberglass Entry Door - Left Sidelite (18" Cl
 
 Red Cent (Sherwin-Williams SW 6341)
 
-![House color swatch](red-cent.svg)
+![Front door color swatch](red-cent.svg)
 
 ## House color
 
