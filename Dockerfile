@@ -13,7 +13,8 @@ RUN mkdir -p themes/rhew-org-theme
 RUN apk add --update git
 RUN git clone https://github.com/panr/hugo-theme-terminal.git themes/rhew-org-theme
 RUN git clone https://github.com/martignoni/hugo-video.git themes/hugo-video
-RUN hugo --minify
+ARG HUGO_BASEURL=https://rhew.org/projects/
+RUN hugo --minify --baseURL "${HUGO_BASEURL}"
 
 
 FROM caddy:2.10

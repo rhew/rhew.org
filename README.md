@@ -16,9 +16,19 @@ touch stripper-secrets.env
 
 ```
 make rhew.org-local
-docker compose -f compose.yml -f compose.local.yml up rhew.org 
+docker compose -f compose.yml -f compose.local.yml up rhew.org
 curl https://localhost
 curl https://localhost/projects
+curl https://localhost/projects/ab-nachos/
+curl -I https://localhost/projects/posts/ab-nachos/
+```
+
+The local Compose override builds Hugo with `https://localhost/projects/` as
+its `baseURL`, so generated links stay on localhost. For Hugo's built-in
+development server, run from `hugo-src/` with an explicit local base URL:
+
+```
+hugo server --baseURL http://localhost:1313/projects/
 ```
 
 # Remote
@@ -65,4 +75,3 @@ https://superuser.com/questions/828907/how-to-download-a-website-from-the-archiv
 ```
 wget -rc --accept-regex '.*http://rhew.org/.*' http://web.archive.org/web/20180116030939/http://rhew.org/
 ```
-

@@ -1,5 +1,8 @@
 services:
   rhew.org:
+    build:
+      args:
+        HUGO_BASEURL: https://localhost/projects/
     volumes:
       - ./Caddyfile.local:/etc/caddy/Caddyfile
   manager:

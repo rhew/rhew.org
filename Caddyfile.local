@@ -8,6 +8,8 @@ localhost {
         {$PODCAST_USER} {$PODCAST_PASSWORD_HASH}
     }
     reverse_proxy /cgi-bin/food.cgi 8ball:7283
+    @old_posts path_regexp old_posts ^/projects/posts/?(.*)$
+    redir @old_posts /projects/{re.old_posts.1} 308
     file_server
     tls internal
 }

@@ -2,6 +2,10 @@ baseURL = 'https://rhew.org/projects/'
 languageCode = 'en-us'
 title = 'rhew.org: projects'
 theme = ["hugo-video", "rhew-org-theme"]
+disableKinds = ["section"]
+
+[permalinks.page]
+  posts = "/:filename/"
 
 [params]
   centerTheme = true
