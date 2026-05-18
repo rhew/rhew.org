@@ -1,0 +1,58 @@
+{{ define "main" }}
+<article class="post" data-pagefind-ignore>
+  <h1 class="post-title">Search</h1>
+
+  <div id="search-results" class="search-results"></div>
+  <script type="module">
+    const pagefindUrl = "{{ "pagefind/pagefind.js" | relURL }}";
+    const resultsElement = document.getElementById("search-results");
+    const params = new URLSearchParams(window.location.search);
+    const query = (params.get("q") || "").trim();
+
+    const escapeHtml = (value) => String(value || "")
+      .replaceAll("&", "&amp;")
+      .replaceAll("<", "&lt;")
+      .replaceAll(">", "&gt;")
+      .replaceAll('"', "&quot;");
+
+    const renderResult = (result) => {
+      const title = result.meta?.title || result.title || result.url;
+      const excerpt = result.excerpt || result.content || "";
+      const subResults = (result.sub_results || []).slice(0, 3).map((subResult) => {
+        const subTitle = subResult.title || subResult.url;
+        return `
+          <li>
+            <a class="pagefind-ui__result-link" href="${escapeHtml(subResult.url)}">${escapeHtml(subTitle)}</a>
+            ${subResult.excerpt ? `<div class="pagefind-ui__result-excerpt">${subResult.excerpt}</div>` : ""}
+          </li>
+        `;
+      }).join("");
+
+      return `
+        <article class="pagefind-ui__result">
+          <h2 class="pagefind-ui__result-title">
+            <a href="${escapeHtml(result.url)}">${escapeHtml(title)}</a>
+          </h2>
+          ${excerpt ? `<div class="pagefind-ui__result-excerpt">${excerpt}</div>` : ""}
+          ${subResults ? `<ul class="pagefind-ui__result-nested">${subResults}</ul>` : ""}
+        </article>
+      `;
+    };
+
+    if (!query) {
+      resultsElement.innerHTML = '<p class="pagefind-ui__message">Type a search after the prompt and press Enter.</p>';
+    } else {
+      resultsElement.innerHTML = '<p class="pagefind-ui__message">Searching...</p>';
+      const pagefind = await import(pagefindUrl);
+      const search = await pagefind.search(query);
+
+      if (!search || search.results.length === 0) {
+        resultsElement.innerHTML = `<p class="pagefind-ui__message">No results for <strong>${escapeHtml(query)}</strong>.</p>`;
+      } else {
+        const results = await Promise.all(search.results.slice(0, 20).map((result) => result.data()));
+        resultsElement.innerHTML = results.map(renderResult).join("");
+      }
+    }
+  </script>
+</article>
+{{ end }}

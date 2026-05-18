@@ -21,6 +21,8 @@ curl https://localhost
 curl https://localhost/projects
 curl https://localhost/projects/ab-nachos/
 curl -I https://localhost/projects/posts/ab-nachos/
+curl -I https://localhost/projects/pagefind/pagefind.js
+curl https://localhost/projects/search/
 ```
 
 The local Compose override builds Hugo with `https://localhost/projects/` as
@@ -30,6 +32,12 @@ development server, run from `hugo-src/` with an explicit local base URL:
 ```
 hugo server --baseURL http://localhost:1313/projects/
 ```
+
+The Docker build installs Pagefind through its Python package, runs it after
+Hugo, and serves the generated search bundle from `/projects/pagefind/`. Plain
+`hugo server` does not run Pagefind, so the `/projects/search/` page renders but
+search results only work after a Docker build or a manual Pagefind run against
+the generated `public/` directory.
 
 # Remote
 

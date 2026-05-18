@@ -1,0 +1,161 @@
+.header-search {
+  display: flex;
+  align-items: center;
+  align-self: stretch;
+  flex: 0 0 auto;
+  position: relative;
+  width: 12ch;
+  background: var(--accent);
+  color: var(--background);
+  white-space: nowrap;
+}
+
+.header-search input {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  min-width: 0;
+  border: 0;
+  border-radius: 0;
+  background: transparent;
+  color: var(--background);
+  font: inherit;
+  font-weight: bold;
+  outline: none;
+  padding: 5px 0;
+  caret-color: var(--background);
+  caret-shape: block;
+}
+
+.header-search:focus-within input {
+  color: var(--background);
+}
+
+.header-search-hint {
+  align-self: center;
+  flex: 0 0 auto;
+  margin-left: 1ch;
+  margin-right: 1ch;
+  color: color-mix(in srgb, var(--background) 65%, var(--accent));
+  font-weight: normal;
+  opacity: 0.7;
+  pointer-events: none;
+  white-space: nowrap;
+}
+
+.header-search:focus-within .header-search-hint {
+  display: none;
+}
+
+.header-search input[data-has-value] + .header-search-hint {
+  display: none;
+}
+
+.pagefind-ui__search-input::-webkit-search-cancel-button {
+  display: none;
+  appearance: none;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+}
+
+.search-results {
+  --pagefind-ui-primary: var(--accent);
+  --pagefind-ui-text: var(--foreground);
+  --pagefind-ui-font: "Fira Code", Monaco, Consolas, "Ubuntu Mono", monospace;
+  --pagefind-ui-background: var(--background);
+  --pagefind-ui-border: var(--accent);
+  --pagefind-ui-border-width: 2px;
+  --pagefind-ui-border-radius: 0;
+  --pagefind-ui-scale: 1;
+}
+
+.search-results,
+.search-results * {
+  font-family: "Fira Code", Monaco, Consolas, "Ubuntu Mono", monospace !important;
+}
+
+.pagefind-ui__results-area {
+  margin-top: 25px;
+}
+
+.pagefind-ui__result {
+  padding: 30px 0 !important;
+  border-top: 0 !important;
+  border-bottom: 1px solid color-mix(in srgb, var(--foreground) 10%, transparent) !important;
+}
+
+.pagefind-ui__result-title {
+  position: relative;
+  color: var(--accent) !important;
+  margin-top: 0 !important;
+  margin-bottom: 15px !important;
+  padding-bottom: 15px !important;
+  border-bottom: 3px dotted var(--accent) !important;
+  font-size: calc(var(--font-size) * 1.35) !important;
+  font-weight: bold !important;
+}
+
+.pagefind-ui__result-title::after {
+  content: "";
+  position: absolute;
+  bottom: 2px;
+  display: block;
+  width: 100%;
+  border-bottom: 3px dotted var(--accent);
+}
+
+.pagefind-ui__result-title a,
+.pagefind-ui__result-link {
+  color: var(--accent) !important;
+  text-decoration: none !important;
+  font-weight: bold !important;
+}
+
+.pagefind-ui__result-excerpt,
+.pagefind-ui__result-nested,
+.pagefind-ui__result-nested .pagefind-ui__result-link {
+  color: var(--foreground) !important;
+  font-size: var(--font-size) !important;
+  line-height: var(--line-height) !important;
+}
+
+.pagefind-ui__result-nested {
+  margin-bottom: 0;
+}
+
+.pagefind-ui__result-excerpt mark {
+  background: var(--accent) !important;
+  color: var(--background) !important;
+  font-weight: bold !important;
+  padding: 0 2px;
+}
+
+.pagefind-ui__message,
+.pagefind-ui__button {
+  color: var(--foreground) !important;
+  font-size: var(--font-size) !important;
+}
+
+.pagefind-ui__button {
+  border-color: var(--accent) !important;
+}
+
+@media (max-width: 684px) {
+  .header-search {
+    width: 9ch;
+  }
+}
+
+.header-search:not(:focus-within) input:not([data-has-value]) {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  color: transparent;
+}

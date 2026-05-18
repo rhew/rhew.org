@@ -1,0 +1,34 @@
+<a href="{{ if $.Site.Params.Logo.LogoHomeLink }}{{ $.Site.Params.Logo.LogoHomeLink }}{{ else }}{{ $.Site.BaseURL }}{{ end }}">
+  <div class="logo">
+    {{ with $.Site.Params.Logo.logoText }}{{ . }}{{ else }}Terminal{{ end }}
+  </div>
+</a>
+
+<form class="header-search" action="{{ "search/" | relURL }}" method="get" role="search">
+  <label class="sr-only" for="header-search">Search</label>
+  <input id="header-search" name="q" type="text" autocomplete="off" aria-label="Search">
+  <span class="header-search-hint" aria-hidden="true">Search</span>
+</form>
+<script>
+  window.addEventListener("DOMContentLoaded", () => {
+    const searchInput = document.getElementById("header-search");
+    const updateSearchState = () => {
+      searchInput.toggleAttribute("data-has-value", searchInput.value.length > 0);
+    };
+    const canAutofocus =
+      window.matchMedia("(min-width: 685px)").matches &&
+      window.matchMedia("(hover: hover) and (pointer: fine)").matches;
+
+    if (searchInput) {
+      const params = new URLSearchParams(window.location.search);
+      searchInput.value = params.get("q") || "";
+      updateSearchState();
+      searchInput.addEventListener("input", updateSearchState);
+    }
+
+    if (searchInput && canAutofocus) {
+      searchInput.focus();
+      searchInput.select();
+    }
+  });
+</script>
