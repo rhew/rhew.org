@@ -5,3 +5,5 @@ hugo-src/public/
 hugo-src/themes/
 hugo-src/.hugo_build.lock
 **/cheat-sheet.*
+.codex
+AGENTS.md
