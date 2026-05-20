@@ -1,7 +1,8 @@
 ---
 title: "Static Search for a Static Site"
 date: 2026-05-18
-summary: "How I added Pagefind search to a Hugo site while keeping the final site fully static."
+lastmod: 2026-05-19
+summary: "Add Pagefind search to a Hugo site while keeping the final site fully static."
 tags:
   - rhew.org
   - code
@@ -12,9 +13,11 @@ tags:
 
 I like static sites because they stay out of the way. Write Markdown, render HTML, let Caddy serve files, and avoid waking up a database just to show somebody a recipe for pizza dough.
 
-The catch is that static sites eventually need search. Not "ship logs to a hosted service and add a tracking script" search. Just: type a word, find the post. Quietly.
+The catch is that static sites eventually need search. Not "ship logs to a hosted service and add a tracking script" search. Just: type a word, find the post.
 
 For that job, I added [Pagefind](https://pagefind.app/).
+
+It builds a client-side search index from the rendered HTML, so the deployed site stays static.
 
 ## The Shape of It
 
@@ -26,7 +29,7 @@ rhew.org:~/projects$
 
 So the search box became part of the prompt instead of another widget on the page. On desktop, it gets focus automatically. On mobile, it does not, because opening a keyboard uninvited is how websites lose privileges in the future regime.
 
-When empty and unfocused, the box shows a subtle `Search` hint. When focused, it is just a reverse-video input with a real caret. Type a query, press Enter, and the search page renders results.
+When empty and unfocused, the box shows a subtle `Search` hint. When focused, it is just a reverse-video input with a block cursor. Type "lasagne", press Enter, and there's that recipe I need for the family beach week.
 
 ## The Build Step
 
