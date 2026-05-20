@@ -1,8 +1,7 @@
 ---
 title: "Exterior Colors and Selections"
 date: 2026-04-22
-description: "A summary of exterior selections and colors for HOA architectural review."
-summary: "Exterior selections and colors"
+summary: "A summary of exterior selections and colors for HOA architectural review."
 tags:
   - renovation
 ---

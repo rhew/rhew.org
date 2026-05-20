@@ -1,7 +1,7 @@
 ---
 title: "Static Search for a Static Site"
 date: 2026-05-18
-summary: "Adding search to a Hugo site without adding a server."
+summary: "How I added Pagefind search to a Hugo site while keeping the final site fully static."
 tags:
   - rhew.org
   - code

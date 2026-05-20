@@ -7,7 +7,7 @@ tags:
   - crafts
   - minion
 cover: "new-monsters.jpg"
-description: "After more than a decade of faithful service, the cardboard sentinels have been replaced with new foam creations fit for a modern villain."
+summary: "After more than a decade of faithful service, the cardboard sentinels have been replaced with new foam creations fit for a modern villain."
 ---
 
 For over a decade, three loyal monsters—**Tyler**, **Russell**, and **Bryan** (formerly known as *Sampson*, as of today’s official name change)—stood watch over my domain. They once even guarded our family one fateful Halloween at *Salubrious View* in Sunset Beach. Born from a humble cardboard box, they struck fear into the hearts of candy-seeking mortals and possibly a few passing HOA representatives.
