@@ -7,6 +7,7 @@ tags:
   - crafts
   - lori
   - halloween
+  - tabi
 ---
 
 # The Mystery Machine: A Halloween Tale of Craft Supplies and Canine Commitment
