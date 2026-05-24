@@ -4,6 +4,7 @@ todo.md
 hugo-src/public/
 hugo-src/themes/
 hugo-src/.hugo_build.lock
+hugo-local-public/
 **/cheat-sheet.*
 .codex
 AGENTS.md

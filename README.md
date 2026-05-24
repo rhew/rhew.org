@@ -33,11 +33,19 @@ development server, run from `hugo-src/` with an explicit local base URL:
 hugo server --baseURL http://localhost:1313/projects/
 ```
 
+For a local static Hugo build outside Docker, use the Makefile target so output
+goes to the ignored `hugo-local-public/` directory instead of the legacy
+tracked `site/` tree:
+
+```
+make hugo-local
+```
+
 The Docker build installs Pagefind through its Python package, runs it after
 Hugo, and serves the generated search bundle from `/projects/pagefind/`. Plain
 `hugo server` does not run Pagefind, so the `/projects/search/` page renders but
 search results only work after a Docker build or a manual Pagefind run against
-the generated `public/` directory.
+the generated output directory.
 
 # Remote
 
