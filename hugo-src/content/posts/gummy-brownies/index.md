@@ -16,7 +16,7 @@ My grandmother's recipe that my Uncle Joel makes for us at the beach!
 - ½ to ¾ cup cocoa powder  
 - 3 eggs  
 - 2 cups sugar  
-- 1 cup all-purpose flour  
+- 1 cup all-purpose flour, or 1 cup King Arthur Measure for Measure Gluten-Free Flour
 - 1 teaspoon vanilla extract  
 - ½ teaspoon salt
 
@@ -33,4 +33,4 @@ My grandmother's recipe that my Uncle Joel makes for us at the beach!
 
 ---
 
-Best served at the beach, preferably during games.
+Best served with ice cream at the beach, preferably during games.
