@@ -6,6 +6,7 @@ cover: nixie-clock.jpg
 tags:
   - supervillainy
   - crafts
+  - electronics
   - retirement
 summary: "Thanks to a thoughtful retirement gift and a firmware tweak, happy hour is now at the press of a button."
 ---

@@ -6,6 +6,7 @@ coverVideo: pdp-11-display.mp4
 tags:
   - 3d-printing
   - crafts
+  - electronics
   - code
 ---
 
