@@ -1,6 +1,6 @@
 
 
-FROM alpine:latest as hugo-builder
+FROM alpine:3.23 AS hugo-builder
 RUN apk add --update hugo python3 py3-pip
 
 WORKDIR /var/hugo

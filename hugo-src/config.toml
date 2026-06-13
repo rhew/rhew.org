@@ -5,7 +5,7 @@ theme = ["hugo-video", "rhew-org-theme"]
 disableKinds = ["section"]
 
 [permalinks.page]
-  posts = "/:filename/"
+  posts = "/:contentbasename/"
 
 [params]
   centerTheme = true
