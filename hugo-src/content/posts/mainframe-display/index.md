@@ -12,7 +12,7 @@ tags:
 
 I started with a much larger and more ridiculous idea.
 
-The plan was to fill the big front windows with addressable LEDs. Something interactive. Maybe Tetris. Maybe holiday animations. Maybe a faux retro computer display that looked like the WOPR had moved into the living room and was waiting for someone to ask about global thermonuclear war.
+The plan was to fill the big front windows of the house with addressable LEDs. Something interactive. Maybe Tetris. Maybe holiday animations. Maybe a faux retro computer display that looked like the WOPR had moved into the living room and was waiting for someone to ask about global thermonuclear war.
 
 This was before I had a 3D printer. It was before I had done much with microcontrollers. It was before I knew just enough electronics to make a small glowing thing and then confidently blame the wrong part when it did not glow.
 
@@ -20,7 +20,7 @@ The big-window version ran into three problems.
 
 First, that would be a lot of LEDs. A lot of power. A lot of wiring. A lot of places for small mistakes to hide.
 
-Second, the test grid was already interesting.
+Second, the test grid was already interesting enough that I wanted to keep going with it.
 
 {{< video src="5x10-prototype.mp4" autoplay="true" loop="true" muted="true" >}}
 
@@ -28,7 +28,9 @@ Third, the display would block the window.
 
 That last one proved inconvenient. Windows, I am told, have an established purpose.
 
-So the giant window Tetris wall turned into something better: a finished 10×10 LED display that lives in an IKEA KALLAX shelf, next to the gin, cookbooks, and other small 3D-printed evidence of a productive problem.
+![My wife's reaction to the original window-blocking idea](blocked-window.png)
+
+So the giant picture-window Tetris wall turned into something better: a finished 10×10 LED display that lives in an IKEA KALLAX shelf, next to the gin, cookbooks, and other small 3D-printed evidence of a productivity problem.
 
 Lori said it could stay in the house, which is the maker equivalent of a certificate of occupancy.
 
@@ -138,7 +140,7 @@ Learn. Revert. Restart. Try again with better dependencies.
 
 That is an effective learning process, but it has poor ergonomics.
 
-I started the design in FreeCAD around 0.22 and later moved to FreeCAD 1.0.x. If I started over, I would make the model cleaner with a master sketch, a more deliberate body hierarchy, and better use of subshape binders.
+I started the design in FreeCAD around 0.22 and later moved to FreeCAD 1.0.x. If I were to start over, I would make the model cleaner with a master sketch, a more deliberate body hierarchy, and better use of subshape binders.
 
 The printer itself was not the problem. The Bambu P1S worked well. I even accidentally printed one of the four backplanes in PETG instead of PLA, and it still fit with the others. Maybe it is a little tighter. Maybe not. It works.
 
@@ -160,6 +162,6 @@ You need a microcontroller, addressable LED strings or strips, a way to mount an
 
 Mine ended up as a 10×10 shelf mainframe.
 
-The window-sized Tetris wall can wait.
+The house-window-sized Tetris wall can wait.
 
 Or maybe it already did its job by tricking me into building this.
