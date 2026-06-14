@@ -13,8 +13,6 @@ I've wanted to clean up the network side of the house for a while. The goal is s
 
 Rather than buy a big rack and pretend I'm running a datacenter in the spare room, I chose a small 10-inch setup. It has room for the practical pieces I need without taking over the house.
 
-![Small 10-inch network rack with a Lenovo ThinkCentre installed](network-rack.jpg)
-
 ## The Starting Point
 
 Most of this build is based on 3D printable parts:
@@ -27,6 +25,7 @@ Most of this build is based on 3D printable parts:
 
 The PDU was fussy enough to deserve its own writeup. The details live here: [Rackmount PDU Remix](../network-rack-pdu/).
 The switch mount also needed a little trimming: I clipped off the mounting tabs because they were in the wrong place for my switch.
+The ThinkCentre became the new home for my services in [Replacing RedPi](../replacing-redpi/).
 
 ## Why This Project Exists
 
