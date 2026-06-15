@@ -1,19 +1,21 @@
 ---
-title: "Mueller's No-Boil Sausage Lasagna"
+title: "Mueller's No-Boil Sausage Lasagne"
 date: 2026-06-07
-summary: "Mueller's classic no-boil lasagna, with Italian sausage instead of ground beef."
+summary: "Mueller's classic no-boil lasagne, with Italian sausage instead of ground beef."
+aliases:
+  - /muellers-no-boil-sausage-lasagna/
 cover: rip-garfield.jpg
 tags:
   - recipes
 ---
 
-## Mueller's No-Boil Sausage Lasagna
+## Mueller's No-Boil Sausage Lasagne
 
-This is Mueller's classic no-boil lasagna recipe, based on the [Mueller's No-Boil Classic Lasagna](https://www.muellerspasta.com/recipes/no-boil-classic-lasagna/). I use **Italian sausage** instead of ground beef.
+This is Mueller's classic no-boil lasagne recipe, based on the [Mueller's No-Boil Classic Lasagna](https://www.muellerspasta.com/recipes/no-boil-classic-lasagna/). I use **Italian sausage** instead of ground beef.
 
 ### Ingredients
 
-- 8 oz lasagna noodles (1/2 box), uncooked
+- 8 oz lasagne noodles (1/2 box), uncooked
 - 1 lb Italian sausage, cooked and drained
 - 1 (15 oz) container ricotta cheese
 - 2 cups shredded mozzarella cheese, divided
@@ -28,7 +30,7 @@ This is Mueller's classic no-boil lasagna recipe, based on the [Mueller's No-Boi
 2. In a medium bowl, combine ricotta, 1 cup mozzarella, Parmesan, and eggs. Mix well.
 3. In a separate bowl, stir the cooked sausage and red pepper flakes into the pasta sauce.
 4. Spread 1 cup of the sauce mixture in the bottom of a 9x13-inch baking dish.
-5. Add a layer of lasagna noodles, then half of the ricotta mixture, then more sauce.
+5. Add a layer of lasagne noodles, then half of the ricotta mixture, then more sauce.
 6. Repeat the layering with the remaining noodles, ricotta mixture, and sauce.
 7. Top with the remaining 1 cup mozzarella.
 8. Cover with foil and bake for 55 minutes.

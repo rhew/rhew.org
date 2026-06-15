@@ -1,13 +1,13 @@
 ---
-title: "Free Lasagna"
+title: "Free Lasagne"
 date: 2025-05-25
-summary: "A hearty, flavorful lasagna made without gluten, alliums, or cow dairy. Serves 6."
+summary: "A hearty, flavorful lasagne made without gluten, alliums, or cow dairy. Serves 6."
 cover: lasagne.jpg
 tags:
   - recipes
 ---
 
-## Gluten-Free, Allium-Free, Cow Cheese-Free Lasagna
+## Gluten-Free, Allium-Free, Cow Cheese-Free Lasagne
 
 *Serves 6 — Fits in an 11×7 inch baking dish*
 
@@ -59,7 +59,7 @@ Mix until well blended.
 
 ---
 
-### Assemble the Lasagna
+### Assemble the Lasagne
 
 In a greased 11×7 inch baking dish, layer as follows:
 
