@@ -3,6 +3,7 @@ title: "Gummy’s Brownies"
 date: 2025-05-26
 lastmod: 2026-05-28
 summary: "My grandmother's recipe that my Uncle Joel makes for us at the beach!"
+cover: brownies.jpg
 tags: 
   - recipes
 ---
