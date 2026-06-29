@@ -20,8 +20,7 @@ services:
       context: ../memory-clock/server
     container_name: memory-clock
     volumes:
-      - ./memory-clock-data/calendar.yaml:/data/calendar.yaml:ro
-      - ./memory-clock-data/devices.jsonl:/data/devices.jsonl:ro
+      - ./memory-clock-data:/data:ro
     networks:
       - reverse_proxy
     restart: unless-stopped
