@@ -15,6 +15,16 @@ services:
       - caddy-data:/data
     networks:
       - reverse_proxy
+  memory-clock:
+    build:
+      context: ../memory-clock/server
+    container_name: memory-clock
+    volumes:
+      - ./memory-clock-data/calendar.yaml:/data/calendar.yaml:ro
+      - ./memory-clock-data/devices.jsonl:/data/devices.jsonl:ro
+    networks:
+      - reverse_proxy
+    restart: unless-stopped
   8ball:
     build:
       context: 8ball
