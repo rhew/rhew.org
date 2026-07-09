@@ -5,6 +5,7 @@ summary: "A custom e-paper clock that combines orientation cues with appointment
 cover: clock-in-action.jpg
 tags:
   - electronics
+  - microcontroller
   - code
   - docker
 ---
