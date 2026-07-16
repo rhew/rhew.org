@@ -56,10 +56,9 @@ To build and serve the site, I used a two-stage Dockerfile:
 2. Stage Two:
   - Copies the rendered content from stage one.
   - Uses [Caddy](https://caddyserver.com/) to serve the rendered site.
-  - You can view the full Dockerfile [here](https://github.com/rhew/rhew.org/blob/main/Dockerfile.rhew.org).
+  - You can view the full Dockerfile [here](https://github.com/rhew/rhew.org/blob/main/Dockerfile).
 
 This setup keeps my repository clean and focused on content. It embodies the simplicity I value—minimal distractions and maximum utility.
 
 Happy blogging!
-
 

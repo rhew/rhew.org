@@ -1,6 +1,7 @@
 ---
 title: "A Mainframe-Inspired Display for Weather"
 date: 2026-06-03
+lastmod: 2026-07-16
 summary: "A 10×10 LED shelf display inspired by old front panels, built for weather, animations, and a little PDP-11 ambiance."
 coverVideo: pdp-11-display.mp4
 tags:
@@ -117,7 +118,9 @@ The big software improvement was making the controller a simple network display 
 
 That changed the project.
 
-Instead of rebuilding firmware every time I wanted better fog, I could write Python clients and iterate quickly. The clients run as Docker containers on a Raspberry Pi 3B that already handles several other household jobs. The display clients are lightweight, so the Pi is plenty.
+Instead of rebuilding firmware every time I wanted better fog, I could write Python clients and iterate quickly. The display code lives in my [led-pixel-wall repo](https://github.com/rhew/led-pixel-wall). The clients run as Docker containers on a Raspberry Pi 3B that already handles several other household jobs. The display clients are lightweight, so the Pi is plenty.
+
+Update, 2026-07-16: the Raspberry Pi has since been replaced by Lenny, a small Lenovo ThinkCentre. I wrote that migration up in [Replacing RedPi]({{< ref "/posts/replacing-redpi" >}}).
 
 Right now, one client controls the display at a time. The DDP receiver accepts data from any sender. I looked into doing control arbitration on the controller, but DDP does not really provide a clean ownership model. If I add that later, I will likely do it in a client.
 
@@ -166,3 +169,11 @@ Mine ended up as a 10×10 shelf mainframe.
 The house-window-sized Tetris wall can wait.
 
 Or maybe it already did its job by tricking me into building this.
+
+## Resources
+
+- [led-pixel-wall](https://github.com/rhew/led-pixel-wall): firmware, clients, and project code for this display.
+- [WLED documentation](https://kno.wled.ge/): useful background on addressable LEDs and DDP.
+- [Unexpected Maker TinyS3](https://esp32s3.com/tinys3.html): the ESP32-S3 board I used for the breadboard prototype.
+- [Seeed Studio XIAO ESP32S3](https://www.seeedstudio.com/XIAO-ESP32S3-p-5627.html): the controller board I used in the finished build.
+- [bitluni's ping-pong-ball LED wall](https://hackaday.com/2019/05/17/a-ping-pong-ball-led-video-wall/): the project that helped put this idea in my head.
