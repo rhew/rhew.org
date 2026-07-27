@@ -7,4 +7,5 @@ hugo-src/.hugo_build.lock
 hugo-local-public/
 **/cheat-sheet.*
 .codex
-AGENTS.md
+memory-clock-data/
+memory-clock-state/

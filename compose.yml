@@ -21,6 +21,9 @@ services:
     container_name: memory-clock
     volumes:
       - ./memory-clock-data:/data:ro
+      - ./memory-clock-state:/state
+    environment:
+      MEMORY_CLOCK_ADMIN_TOKEN_HASH_FILE: /data/admin-token.sha256
     networks:
       - reverse_proxy
     restart: unless-stopped
