@@ -1,6 +1,7 @@
 ---
 title: "Memory Clock"
 date: 2026-06-30
+lastmod: 2026-08-13
 summary: "A custom e-paper clock that combines orientation cues with appointment pages."
 cover: clock-in-action.jpg
 tags:
@@ -63,6 +64,8 @@ For me, it should be easy to maintain:
 - let the clock fetch updates automatically
 - avoid re-flashing firmware for ordinary calendar changes
 - keep the data private enough that only known devices can fetch it
+- see whether the clock is healthy without visiting it
+- send a short, dismissible message when the calendar is not enough
 
 ## Hardware Choices
 
@@ -96,6 +99,10 @@ That split matters.
 
 If the network is down, the device should still be a clock. It also keeps the appointment pages it already has. Losing updates is annoying. Losing the current time, or blanking already-loaded appointments, would make the whole object feel broken.
 
+E-paper adds another wrinkle: a full-screen refresh is slow and visually disruptive. The clock now uses a partial refresh for ordinary minute changes. Page changes and ten-minute boundaries get a full refresh to clear accumulated ghosting. Network polling runs separately from display work, so a slow request does not make the navigation buttons feel stuck.
+
+Most of the time there are no status indicators at all. If something needs attention, small icons appear along the bottom for missing Wi-Fi, an unreachable calendar server, or a low battery. The battery reading uses the median of several ADC samples and ignores impossible voltages, because a warning that cannot be trusted is not useful.
+
 ## Startup
 
 The startup screens are part of the product, not just debugging output. They answer the question a non-technical person will naturally have: "Is it working?"
@@ -112,6 +119,8 @@ The clock starts by checking each dependency in order:
 If the clock can set the time but cannot reach the calendar server, it should still show the clock and make the failure obvious. The right answer is not a silent blank area. It is a clear error screen and a retry later.
 
 ![Server error screen](error-screen.jpg)
+
+The retry behavior became more deliberate after I lived with the clock for a while. Failed server requests get short retries before returning to the normal polling interval. Lost Wi-Fi or IP connectivity triggers a new association, and a long outage eventually gets one guarded restart instead of a reboot loop. Time synchronization also retries with backoff rather than treating a temporary NTP failure as fatal.
 
 ## The Software Split
 
@@ -139,12 +148,31 @@ The server is a small Python service behind my existing Caddy reverse proxy. It 
 
 - calendar entries from a YAML file
 - allowed device token hashes from a JSONL file
+- named alert sounds from another YAML file
 
 The clock polls a private endpoint with a bearer token. If the token matches a known device, the server returns metadata plus paths for rendered page images. The device then fetches the page image data it needs.
 
-The server also honors `If-Modified-Since`, so the clock does not have to download pages again when nothing changed.
+The server also honors `If-Modified-Since`, so the clock does not have to download pages again when nothing changed. It sorts appointments by their recognized start times and decides which date should be first. Today's page remains visible until an hour after its final appointment begins; after that, the server advances to the next date that actually has appointments and labels it "Tomorrow" or "Next Appointment" as appropriate.
 
 Updating the calendar is intentionally low ceremony. I maintain the real appointment calendar, annotate it, and keep the generation rules alongside it. The resulting YAML is what the server reads. Once that YAML changes on the host, the next clock poll sees the updated server state and refreshes the appointment pages.
+
+## The Administration Side
+
+The first version had no convenient way to answer questions like "Did the clock pick up the new calendar?" or "Is its battery getting low?" I have since added an authenticated administration dashboard. Each clock reports a small status snapshot as part of its normal poll: firmware version, battery voltage, Wi-Fi signal, uptime, and time since the last button press. The server keeps only the latest snapshot, not a telemetry history.
+
+![Administration dashboard showing the latest state of configured clocks](admin-clocks-page.png)
+
+The dashboard can also preview the exact monochrome appointment cards the server currently generates and show the source calendar data. This catches bad wrapping, awkward descriptions, and ordering mistakes before they become confusing on the physical display.
+
+![Server preview of the appointment pages that will be sent to the clock](admin-pages-page.png)
+
+The dashboard has its own administrator credential, separate from the bearer tokens used by clocks. The browser exchanges that token for a secure session cookie, and it never receives a device token.
+
+## Messages And Alerts
+
+Sometimes the useful information is not an appointment. The dashboard can now queue one persistent message for a specific clock. It takes over the screen and stays there until the top green button is pressed or I remove it from the dashboard. The clock and server track whether the message is queued, displayed, or dismissed; the clock also stores a pending dismissal in nonvolatile memory so a power failure cannot make an old message reappear.
+
+A message can optionally include a short buzzer sequence selected from the server's alert catalog. The server validates and snapshots the sequence with the message, and the clock repeats it after its regular server polls while the message remains active. The supplied examples range from a plain beep to "Shave and a Haircut" and the opening of "La Cucaracha." It is deliberately a small alert mechanism, not a general-purpose remote-control channel.
 
 ## Tradeoffs
 
@@ -158,14 +186,7 @@ That is acceptable for this use. It would not be acceptable for a product.
 
 ## What Is Next
 
-The current version is intentionally plain. I picked fonts by stopping at the first thing that did not look terrible. The clock font and appointment font do not match exactly. The layout is simple because simple is easier to trust. My brother is better at this kind of visual design than I am, so I expect he will have useful opinions once he sees it.
-
-The next improvements I might make are:
-
-- better visual design
-- remote flashing
-- log and error retrieval
-- battery indicator
+The clock is still intentionally plain. The layout is simple because simple is easier to trust, and the device has now spent more development time on recovery behavior than decoration. The battery indicator, remote status view, and error states I originally wanted are in place. Remote firmware updates and better log retrieval would still make maintenance easier, but neither is required for the clock's everyday job.
 
 I am not planning to formalize the calendar-data generation. A real product would probably connect directly to your calendars, provide a lot of configuration, and maybe offer a service or subscription to handle the interpretation and reminders. That is not the project I need. For this version, a real calendar, annotations, written rules, and generated YAML are enough.
 
